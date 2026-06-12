@@ -28,6 +28,11 @@ Implementation of auto-scaling with Elastic Load Balancing and health monitoring
 
 [Download Certificate](Highly%20Available%20Web%20Applications.md)
 
+###Computing Solutions
+Adjustment of EC2 instance sizes to accommodate larger workloads.
+
+[Download Certificate](Computing%20Solutions.md)
+
 ---
 
 ## Quick Links
@@ -35,3 +40,4 @@ Implementation of auto-scaling with Elastic Load Balancing and health monitoring
 - [Cloud Computing Essentials](Cloud%20Computing%20Essentials.md)
 - [Cloud Economics](Cloud%20Economics.md)
 - [Highly Available Web Applications](Highly%20Available%20Web%20Applications.md)
+- [Computing Solutions](Computing%20Solutions.md)
