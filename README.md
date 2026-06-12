@@ -1,9 +1,9 @@
 # AWS-Restart-Portfolio
 My Restart Journey
 
-The Restart program is designed to take you from a beginner in tech to a confident, job-ready professional.
+The Restart program is my path from a beginner in tech to a confident, job-ready professional.
 
-During the program, I learned:
+During the program, I'm learning:
 
 • Cloud Computing: Understanding AWS services, deploying applications, and managing infrastructure.
 
@@ -15,7 +15,7 @@ During the program, I learned:
 
 • Professional Skills: Git, GitHub, documentation, teamwork, and problem-solving.
 
-Restart teaches you not only how to use tools, but also why they matter in real-world IT environments. It encourages hands-on practice, building projects, and documenting your progress, so you can confidently demonstrate your skills to employers.
+The Restart Program teaches you not only how to use tools, but also why they matter in real-world IT environments. It encourages hands-on practice, building projects and documenting progress in order to confidently demonstrate skills to future employers.
 
 Why This Repo?
 
