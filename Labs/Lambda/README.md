@@ -1,7 +1,7 @@
 ![Lab](https://img.shields.io/badge/Lab-Lambda%20Word%20Counter%20with%20S3%20%26%20SNS-brightgreen?style=for-the-badge)
 
 
-![Overview](https://img.shields.io/badge/Overview-orange?style=for-the-badge)
+![Overview](https://img.shields.io/badge/Overview-brightgreen?style=for-the-badge)
 
 The goal of this lab was to build a serverless pipeline that automatically counts the words in any text file uploaded to S3 and delivers the result to an email address. No servers, no manual runs — [...]
 
@@ -10,7 +10,7 @@ The three AWS services used each play a distinct role: **S3** stores the files a
 ---
 
 
-![Architecture](https://img.shields.io/badge/Architecture-orange?style=for-the-badge)
+![Architecture](https://img.shields.io/badge/Architecture-brightgreen?style=for-the-badge)
 
 ```
 S3 Bucket (PUT event)
@@ -28,7 +28,7 @@ Email Notification
 ---
 
 
-![Resources](https://img.shields.io/badge/Resources-orange?style=for-the-badge)
+![Resources](https://img.shields.io/badge/Resources-brightgreen?style=for-the-badge)
 
 | Resource | Name |
 |---|---|
@@ -41,10 +41,10 @@ Email Notification
 ---
 
 
-![Setup](https://img.shields.io/badge/Setup-orange?style=for-the-badge)
+![Setup](https://img.shields.io/badge/Setup-brightgreen?style=for-the-badge)
 
 
-### 1. SNS Topic & Subscription
+![1. SNS Topic & Subscription](https://img.shields.io/badge/1._SNS%20Topic%20%26%20Subscription-orange?style=for-the-badge)
 
 I set up SNS (Simple Notification Service) first because Lambda needs the topic ARN added into its code. If the topic doesn't exist yet then, there's nothing to publish to.
 
@@ -61,7 +61,7 @@ I used a **Standard** topic here rather than FIFO because in this case, the mess
 ---
 
 
-### 2. Lambda Function
+![2. Lambda Function](https://img.shields.io/badge/2._Lambda%20Function-orange?style=for-the-badge)
 
 Lambda is a serverless compute service meaning that, it runs code in response to events without needing to provision or manage a server. The function only runs when triggered, which makes it cost-[...]
 
@@ -80,7 +80,7 @@ Lambda is a serverless compute service meaning that, it runs code in response to
 ---
 
 
-### 3. Function Code
+![3. Function Code](https://img.shields.io/badge/3._Function%20Code-orange?style=for-the-badge)
 
 This function accomplishes four tasks in sequence: 1. Extract the bucket and file details from the incoming S3 event, 2. Read the file contents, 3. Count the words and 4. Publish the result to SNS[...]
 
@@ -125,7 +125,7 @@ To add on:
 ---
 
 
-### 4. Testing with a Simulated Event
+![4. Testing with a Simulated Event](https://img.shields.io/badge/4._Testing%20with%20a%20Simulated%20Event-orange?style=for-the-badge)
 
 Before setting up the S3 trigger, I tested the function in isolation using a manually crafted event. The thinking was to catch any bugs in the code before the trigger instruction kicked in.
 
@@ -159,7 +159,7 @@ The test passed and the SNS email arrived shortly after, confirming the function
 ---
 
 
-### 5. S3 Trigger
+![5. S3 Trigger](https://img.shields.io/badge/5._S3%20Trigger-orange?style=for-the-badge)
 
 With the function validated, the next step was to connect S3 so that the uploads fire the function automatically. This was done by adding an event notification on the bucket that invokes Lambda o[...]
 
@@ -180,7 +180,7 @@ With the function validated, the next step was to connect S3 so that the uploads
 ---
 
 
-![End-to-End Test](https://img.shields.io/badge/End--to--End%20Test-orange?style=for-the-badge)
+![End-to-End Test](https://img.shields.io/badge/End--to--End%20Test-brightgreen?style=for-the-badge)
 
 With the trigger in place, the final test was to upload a new file directly to the S3 bucket and wait for the email with no manual Lambda invocation involved.
 
@@ -195,7 +195,7 @@ The upload fired the PUT event, Lambda executed automatically, and the word coun
 ---
 
 
-![Final Result](https://img.shields.io/badge/Final%20Result-orange?style=for-the-badge)
+![Final Result](https://img.shields.io/badge/Final%20Result-brightgreen?style=for-the-badge)
 
 ```
 Subject: Word Count Result
@@ -206,7 +206,7 @@ The word count in the Wordcounterfiles/textfile.txt file is 6.
 ---
 
 
-![Lessons Learned](https://img.shields.io/badge/Lessons%20Learned-orange?style=for-the-badge)
+![Lessons Learned](https://img.shields.io/badge/Lessons%20Learned-brightgreen?style=for-the-badge)
 
 - **SNS subscriptions must be confirmed** before any emails are delivered. The subscription stays in *Pending* state until the user clicks the confirmation link. I admit this was easy to miss res[...]
 - **CloudWatch Logs** are the first place to check when something goes wrong. Every Lambda invocation writes a log stream to `/aws/lambda/WordCounterfunction`, including the full error traceback [...]
