@@ -1,7 +1,7 @@
 ![Lab](https://img.shields.io/badge/Lab-Lambda%20Word%20Counter%20with%20S3%20%26%20SNS-brightgreen?style=for-the-badge)
 
 
-![Overview](https://img.shields.io/badge/Overview-brightgreen?style=for-the-badge)
+![Overview](https://img.shields.io/badge/Overview-orange?style=for-the-badge)
 
 The goal of this lab was to build a serverless pipeline that automatically counts the words in any text file uploaded to S3 and delivers the result to an email address. No servers, no manual runs — [...]
 
@@ -10,7 +10,7 @@ The three AWS services used each play a distinct role: **S3** stores the files a
 ---
 
 
-![Architecture](https://img.shields.io/badge/Architecture-brightgreen?style=for-the-badge)
+![Architecture](https://img.shields.io/badge/Architecture-orange?style=for-the-badge)
 
 ```
 S3 Bucket (PUT event)
@@ -28,7 +28,7 @@ Email Notification
 ---
 
 
-![Resources](https://img.shields.io/badge/Resources-brightgreen?style=for-the-badge)
+![Resources](https://img.shields.io/badge/Resources-orange?style=for-the-badge)
 
 | Resource | Name |
 |---|---|
@@ -41,7 +41,7 @@ Email Notification
 ---
 
 
-![Setup](https://img.shields.io/badge/Setup-brightgreen?style=for-the-badge)
+![Setup](https://img.shields.io/badge/Setup-orange?style=for-the-badge)
 
 
 ![1. SNS Topic & Subscription](https://img.shields.io/badge/1._SNS%20Topic%20%26%20Subscription-brightgreen?style=for-the-badge)
@@ -179,7 +179,7 @@ With the function validated, the next step is connecting S3 so uploads fire the 
 ---
 
 
-![End-to-End Test](https://img.shields.io/badge/End--to--End%20Test-brightgreen?style=for-the-badge)
+![End-to-End Test](https://img.shields.io/badge/End--to--End%20Test-orange?style=for-the-badge)
 
 With the trigger in place, the final test was uploading a new file directly to the S3 bucket and waiting for the email — no manual Lambda invocation involved.
 
@@ -194,7 +194,7 @@ The upload fired the PUT event, Lambda executed automatically, and the word coun
 ---
 
 
-![Final Result](https://img.shields.io/badge/Final%20Result-brightgreen?style=for-the-badge)
+![Final Result](https://img.shields.io/badge/Final%20Result-orange?style=for-the-badge)
 
 ```
 Subject: Word Count Result
@@ -205,7 +205,7 @@ The word count in the Wordcounterfiles/textfile.txt file is 6.
 ---
 
 
-![Lessons Learned](https://img.shields.io/badge/Lessons%20Learned-brightgreen?style=for-the-badge)
+![Lessons Learned](https://img.shields.io/badge/Lessons%20Learned-orange?style=for-the-badge)
 
 - **SNS subscriptions must be confirmed** before any emails are delivered. The subscription stays in *Pending* state until the user clicks the confirmation link — easy to miss and a common reason em[...]
 - **CloudWatch Logs** are the first place to check when something goes wrong. Every Lambda invocation writes a log stream to `/aws/lambda/WordCounterfunction`, including the full error traceback if th[...]
