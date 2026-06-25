@@ -7,7 +7,7 @@ An exploration of foundational cloud compute concepts using Amazon Elastic Compu
 ## Lab Architecture Overview
 
 <div align="center">
-  <img src="screenshots/Instance%20Overview%201.png" alt="Lab Architecture Overview" width="65%" />
+  <img src="screenshots/Instance%20Overview%1.png" alt="Lab Architecture Overview" width="65%" />
 </div>
 
 *Figure 1: Conceptual architecture featuring an Amazon EC2 instance configured as a web server nested safely within a defined Security Group inside an isolated Availability Zone.*
