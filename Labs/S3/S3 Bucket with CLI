@@ -1,0 +1,87 @@
+# S3 Bucket Setup: Create, Upload, Host, and View Publicly
+
+## 1. Launch EC2 instance for CLI access
+Launched a `t3.micro` EC2 instance (`CLI Host`) in `us-west-2` to run AWS CLI commands.
+
+![Launching CLI through EC2](Labs/S3/Screenshots/1_Launching_CLI_through_EC2.png)
+
+## 2. Configure AWS CLI
+Connected to the instance and ran:
+```bash
+aws configure
+```
+Entered Access Key ID, Secret Access Key, region (`us-west-2`), and output format (`json`).
+
+![Configuring CLI](Labs/S3/Screenshots/2_Configuring_CLI_redacted.png)
+
+> **Note:** never paste real credentials into a terminal that gets screenshotted or committed to a repo. If exposed, rotate them immediately in IAM.
+
+## 3. Create S3 bucket
+Created bucket `mismail125` via the S3 console (Objects: 0 initially).
+
+![Bucket creation through S3](Labs/S3/Screenshots/3_Bucket_creation_through_S3.png)
+
+## 4. Upload files
+**Via console:**
+- Used the **Upload** button to add `file1.txt` (44.0 B) — succeeded.
+
+![Uploading file to S3](Labs/S3/Screenshots/4_1_Uploading_file_to_S3.png)
+
+**Via CLI:**
+```bash
+aws s3 ls s3://mismail125
+touch file2.txt
+aws s3 mv file2.txt s3://mismail125
+```
+Note: `cp file2.txt s3://mismail125` failed (no trailing slash / key name) — `mv` worked as an alternative.
+
+![Creating and adding file to S3 bucket from CLI](Labs/S3/Screenshots/4_2_Creating_and_adding_file_to_s3_bucket_from_CLI_redacted.png)
+
+Confirmed both files present:
+```bash
+aws s3 ls s3://mismail125
+2026-07-03 18:11:45     44 file1.txt
+2026-07-03 18:15:36      0 file2.txt
+```
+
+![Upload to bucket confirmed](Labs/S3/Screenshots/5_Upload_to_bucket_confirmed.png)
+
+## 5. Enable static website hosting
+In bucket **Properties** tab → **Static website hosting** → enabled, set index document (`index.html`).
+
+![Static hosting enabled](Labs/S3/Screenshots/6_Static_hosting_enabled.png)
+
+## 6. Disable Block Public Access
+In bucket **Permissions** tab → **Block public access (bucket settings)** → Edit → turned **off** Block all public access.
+
+![Enabled Public Access](Labs/S3/Screenshots/7_Enabled_Public_Access.png)
+
+## 7. Add public-read bucket policy
+In **Permissions** tab → **Bucket Policy** → added:
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::mismail125/*"
+    }
+  ]
+}
+```
+Result: "Successfully edited bucket policy."
+
+![Added Bucket policy for website viewing](Labs/S3/Screenshots/8_Added_Bucket_policy_for_website_viewing.png)
+
+## 8. View object in browser
+Uploaded `index.html` via CLI, confirmed with:
+```bash
+aws s3 ls s3://mismail125
+2026-07-03 18:11:45     44 file1.txt
+2026-07-03 18:15:36      0 file2.txt
+2026-07-03 18:33:57      0 index.html
+```
+Accessed object directly via URL:
