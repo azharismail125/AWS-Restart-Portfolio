@@ -28,6 +28,8 @@ Implementation of auto-scaling with Elastic Load Balancing and health monitoring
 
 <img src="Screenshots/Highly_Available_Web_Applications.png" width="70%" alt="Highly Available Web Applications Certificate">
 
+---
+
 ### Computing Solutions
 Adjustment of EC2 instance sizes to accommodate larger workloads.
 
@@ -42,6 +44,13 @@ Management and configuration of cloud-based file systems and storage solutions.
 
 ---
 
+### Databases in Practice
+Design and implementation of scalable database solutions using AWS RDS and DynamoDB, with focus on data management and optimization strategies.
+
+<img src="Screenshots/Databases_in_Practice.png" width="70%" alt="Databases in Practice Certificate">
+
+---
+
 ## Quick Links
 - [Cloud First Steps](Screenshots/Cloud_First_Steps_certificate.png)
 - [Cloud Computing Essentials](Screenshots/Cloud_Computing_Essentials.png)
@@ -49,3 +58,4 @@ Management and configuration of cloud-based file systems and storage solutions.
 - [Highly Available Web Applications](Screenshots/Highly_Available_Web_Applications.png)
 - [Computing Solutions](Screenshots/Computing_Solutions.png)
 - [File Systems in the Cloud](Screenshots/File_Systems_in_the_Cloud.png)
+- [Databases in Practice](Screenshots/Databases_in_Practice.png)
