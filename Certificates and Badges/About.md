@@ -45,7 +45,7 @@ Management and configuration of cloud-based file systems and storage solutions.
 ---
 
 ### Databases in Practice
-Design and implementation of scalable database solutions using AWS RDS and DynamoDB, with focus on data management and optimization strategies.
+Design and implementation of scalable database solutions using AWS Aurora and DynamoDB, with focus on adding in read replicas.
 
 <img src="Screenshots/Databases_in_Practice.png" width="70%" alt="Databases in Practice Certificate">
 
