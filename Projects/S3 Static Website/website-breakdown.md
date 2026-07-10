@@ -30,7 +30,7 @@ Confirmation
 Reads submitted form data from the URL and displays a booking/sign-up summary with a generated reference number
 
 Error
-<img src="Website%20Screenshots/8.%20Error%20.png" width="1693">
+<img src="Website%20Screenshots/8.%20Error.png" width="1693">
 Custom 404, set as the S3 error document
 
 ## Shared components
