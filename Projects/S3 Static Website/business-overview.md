@@ -4,15 +4,15 @@
 
 ### Project Overview
 
-Cloud Fitness Gym is a fictional modern fitness and wellness centre undergoing a digital transformation. The current business relies heavily on manual membership registrations, phone bookings, pape[...] 
+Cloud Fitness Gym is a fictional modern fitness and wellness centre undergoing a digital transformation. The current business relies heavily on manual membership registrations, phone bookings, paper records, and social media enquiries, resulting in operational inefficiencies, poor customer experience, and limited scalability.
 
-The objective of this project is to migrate Cloud Fitness Gym's customer-facing website and booking platform to Amazon Web Services (AWS), creating a secure, scalable, highly available, and cost-ef[...] 
+The objective of this project is to migrate Cloud Fitness Gym's customer-facing website and booking platform to Amazon Web Services (AWS), creating a secure, scalable, highly available, and cost-effective cloud-native solution.
 
-The project demonstrates a complete cloud migration strategy, incorporating a responsive static website, serverless backend, cloud-based authentication, database services, automated notifications,[...] 
+The project demonstrates a complete cloud migration strategy, incorporating a responsive static website, serverless backend, cloud-based authentication, database services, automated notifications, monitoring, and cost optimization.
 
 ### Vision Statement
 
-To create a modern, cloud-native digital platform that enables Cloud Fitness Gym to deliver exceptional fitness experiences while leveraging AWS to improve operational efficiency, security, scalab[...]
+To create a modern, cloud-native digital platform that enables Cloud Fitness Gym to deliver exceptional fitness experiences while leveraging AWS to improve operational efficiency, security, scalability, and customer engagement.
 
 ### Project Objectives
 
@@ -95,7 +95,8 @@ Impact: revenue loss.
 Members cannot view bookings, update profiles, view memberships, or track payments.
 Impact: high administrative workload.
 
-**5. Poor Data Management**nCustomer information is stored in spreadsheets.
+**5. Poor Data Management**
+Customer information is stored in spreadsheets.
 Problems: no backup, difficult searching, no audit trail, data duplication.
 Impact: risk of data loss.
 
