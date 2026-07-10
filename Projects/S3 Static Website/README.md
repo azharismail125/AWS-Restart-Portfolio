@@ -1,6 +1,8 @@
 # Cloud Fitness Gym — AWS Static Website Hosting
 
-Static gym website migrated to AWS, hosted on Amazon S3 static website hosting (no EC2, no server, no database).
+The following is a walk-through on our group's take on hosting a website through Amazon S3.
+
+The business in question is Cloud Fitness gym, who needed a revamp on their current website architecture and was keen on diving into cloud architecture to improve on business performance.
 
 **Live:** http://cloudfitnessgym.s3-website.af-south-1.amazonaws.com
 
