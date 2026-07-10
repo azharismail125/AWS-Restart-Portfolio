@@ -4,6 +4,10 @@
 
 The Cloud Fitness Gym website was hosted on Amazon S3 using S3's built-in static website hosting feature. No EC2, no server, no database, simply just files served directly from a storage bucket.
 
+## Bucket setup
+
+![S3 bucket created](S3%20Screenshots/1.%20S3%20Bucket%20Created.png)
+
 ## Steps Taken
 
 ### 1. index.html set as the index document
@@ -46,8 +50,4 @@ The website endpoint (`bucket.s3-website-<region>.amazonaws.com`) behaves like a
 **Live endpoint:** `http://cloudfitnessgym.s3-website.af-south-1.amazonaws.com`
 
 ![Static website hosting enabled](S3%20Screenshots/2.%20Enable%20Static%20Hosting.png)
-
-## Bucket setup
-
-![S3 bucket created](S3%20Screenshots/1.%20S3%20Bucket%20Created.png)
 
