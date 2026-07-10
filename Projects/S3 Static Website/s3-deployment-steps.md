@@ -43,8 +43,6 @@ Turning off "Block Public Access" alone isn't enough as S3 still denies access u
 }
 ```
 
-![Bucket policy added](S3%20Screenshots/4.%20Added%20Bucket%20Policy%20for%20all%20users%20.png)
-
 ### 5. Static website hosting enabled
 
 The website endpoint (`bucket.s3-website-<region>.amazonaws.com`) behaves like a website (index document, error document, etc.). It only supports HTTP, not HTTPS which is a known S3 limitation.
