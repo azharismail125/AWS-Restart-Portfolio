@@ -6,21 +6,23 @@ The Cloud Fitness Gym website was hosted on Amazon S3 using S3's built-in static
 
 ## Steps Taken
 
-![Bucket_Created](S3%20Screenshots/1.%Bucket%20Created%20.png)
-
 ### 1. index.html set as the index document
 
 Static website hosting needs a designated "index document" which is the file returned when someone requests the bucket root URL. In this case, `index.html` is the expected name and matches what the site displays when accessed.
+
+![Home page](Website%20Screenshots/1.%20Home%20page.png)
 
 ### 2. error.html created and set as the error document
 
 Without a custom error document, S3 returns a raw, generic XML error page for any broken link or missing file. An `error.html` was built in the same style as `index.html` so a mistyped URL still looks professional and on-brand.
 
+![Error page](Website%20Screenshots/8.%20Error%20.png)
+
 ### 3. Block Public Access disabled
 
 By default, every new S3 bucket blocks all public access, since most buckets store private data. A public website needs the opposite so that anyone should be able to read the files. This has to be explicitly configured.
 
-![Block Public Access disabled](S3%20Screenshots/3.%20Unblock%20Public%20Access%20.png)
+![Block Public Access disabled](S3%20Screenshots/3.%20Unblock%20Public%20Access.png)
 
 ### 4. Bucket policy added
 
@@ -49,9 +51,9 @@ The website endpoint (`bucket.s3-website-<region>.amazonaws.com`) behaves like a
 
 **Live endpoint:** `http://cloudfitnessgym.s3-website.af-south-1.amazonaws.com`
 
-![Static website hosting enabled](S3%20Screenshots/2_Enable_Static_Hosting.png)
+![Static website hosting enabled](S3%20Screenshots/2.%20Enable%20Static%20Hosting.png)
 
 ## Bucket setup
 
-![S3 bucket created](S3%20Screenshots/1_S3_Bucket_Created.png)
+![S3 bucket created](S3%20Screenshots/1.%20S3%20Bucket%20Created.png)
 
