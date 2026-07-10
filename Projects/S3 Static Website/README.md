@@ -1,4 +1,4 @@
-# Cloud Fitness Gym — AWS Cloud Migration Project
+# Cloud Fitness Gym — AWS Static Website Hosting
 
 Static gym website migrated to AWS, hosted on Amazon S3 static website hosting (no EC2, no server, no database).
 
