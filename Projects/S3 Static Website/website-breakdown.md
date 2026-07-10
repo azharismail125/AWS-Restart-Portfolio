@@ -2,24 +2,36 @@
 
 Static site built for Cloud Fitness Gym, deployed to Amazon S3.
 
-## Stack
-- HTML5, CSS3, vanilla JavaScript — no framework, no build step
-- Font Awesome (icons), Google Fonts (Poppins) — loaded via CDN
-- Google Maps embed on the contact page
-
 ## Pages
 
-| Page | Screenshot | Purpose |
-|---|---|---|
-| Home | ![Home](Website%20Screenshots/1.%20Home%20page.png) | Home, "why choose us" features, featured classes preview |
-| Plans | ![Plans](Website%20Screenshots/2.%20Plans.png) ![Plans continued](Website%20Screenshots/3.%20Plans%20continued.png) | Pricing tiers (Student / Professional / Premium), day pass, corporate & senior r[...] |
-| Classes | ![Classes](Website%20Screenshots/4.%20Classes.png) | Class descriptions + filterable weekly schedule table (by day) |
-| Booking | ![Booking](Website%20Screenshots/5.%20Booking.png) | Class booking form → submits to `confirmation.html` |
-| Contact | ![Contact](Website%20Screenshots/6.%20Contact%20Us.png) | Membership sign-up form + gym contact details and map → submits to `confirmation.html` |
-| Confirmation | ![Confirmation](Website%20Screenshots/7.%20Booking%20confirmation.png) | Reads submitted form data from the URL and displays a booking/sign-up summary with a generated reference number |
-| Error | ![Error](Website%20Screenshots/8.%20Error%20.png) | Custom 404, set as the S3 error document |
+Home
+<img src="Website%20Screenshots/1.%20Home%20page.png" width="1760">
+Home, "why choose us" features and featured classes preview.
 
-Source files: `index.html`, `plans.html`, `classes.html`, `booking.html`, `contact.html`, `confirmation.html`, `error.html`
+Plans
+<img src="Website%20Screenshots/2.%20Plans.png" width="1792">
+<img src="Website%20Screenshots/3.%20Plans%20continued.png" width="1747">
+Pricing tiers (Student / Professional / Premium), day pass, corporate & senior rates.
+
+Classes
+<img src="Website%20Screenshots/4.%20Classes.png" width="1716">
+Class descriptions + filterable weekly schedule table (by day)
+
+Booking
+<img src="Website%20Screenshots/5.%20Booking.png" width="1690">
+Class booking form which submits to confirmation.html
+
+Contact
+<img src="Website%20Screenshots/6.%20Contact%20Us.png" width="1697">
+Membership sign-up form, gym contact details and map which submits to confirmation.html
+
+Confirmation
+<img src="Website%20Screenshots/7.%20Booking%20confirmation.png" width="1655">
+Reads submitted form data from the URL and displays a booking/sign-up summary with a generated reference number
+
+Error
+<img src="Website%20Screenshots/8.%20Error%20.png" width="1693">
+Custom 404, set as the S3 error document
 
 ## Shared components
 - `styles.css` — single stylesheet covering layout, navbar, cards, forms, pricing grid, schedule table, and responsive breakpoints
