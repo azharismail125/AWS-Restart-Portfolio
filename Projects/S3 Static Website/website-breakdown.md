@@ -11,7 +11,7 @@ Static site built for Cloud Fitness Gym, deployed to Amazon S3.
 
 | Page | Screenshot | Purpose |
 |---|---|---|
-| Home | ![Home](Website%20Screenshots/1_Home_page.png) | Hero, "why choose us" features, featured classes preview |
+| Home | ![Home](Website%20Screenshots/1_Home_page.png) | Home, "why choose us" features, featured classes preview |
 | Plans | ![Plans](Website%20Screenshots/2_Plans.png) ![Plans continued](Website%20Screenshots/3_Plans_continued.png) | Pricing tiers (Student / Professional / Premium), day pass, corporate & senior rates, FAQ |
 | Classes | ![Classes](Website%20Screenshots/4_Classes.png) | Class descriptions + filterable weekly schedule table (by day) |
 | Booking | ![Booking](Website%20Screenshots/5_Booking.png) | Class booking form → submits to `confirmation.html` |
@@ -28,9 +28,8 @@ Source files: `index.html`, `plans.html`, `classes.html`, `booking.html`, `conta
   - scroll-based navbar background change
   - fade-in-on-scroll animation (feature/class cards, section titles)
   - class schedule day-filter tabs
-  - confirmation page: reads query params from the booking/sign-up form submission and renders the details + reference number client-side
+  - confirmation page: reads query parameters from the booking/sign-up form submission and renders the details and reference number for the client's side.
 
 ## Design notes
-- No backend — booking and sign-up "submissions" are simulated via GET form params read by JS on the confirmation page. Nothing is persisted or emailed.
+- No backend — booking and sign-up "submissions" are simulated via GET form parameters.
 - Fully static, so it maps directly onto S3 static website hosting with no server required.
-- Image assets referenced in `classes.html`/`index.html` (class photos) are not yet part of the deployed build.
