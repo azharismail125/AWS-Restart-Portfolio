@@ -26,7 +26,7 @@ To create a modern, cloud-native digital platform that enables Cloud Fitness Gym
 - Improve customer experience
 - Demonstrate AWS Cloud Migration best practices
 
-## Section 1: Research & Business Case
+## Research & Business Case
 
 ### Company Profile
 
@@ -50,8 +50,8 @@ To create a modern, cloud-native digital platform that enables Cloud Fitness Gym
 
 **Target Market**
 
-Primary: University Students, Young Professionals, Working Adults
-Secondary: Corporate Employees, Senior Citizens, Professional Athletes
+Primary: University students, young professionals and working adults
+Secondary: Corporate employees, senior citizens, professional athletes
 
 ### Current Business Operations
 
@@ -114,7 +114,7 @@ Management cannot easily answer: How many members joined this month? Most popula
 
 | Strengths | Weaknesses |
 |---|---|
-| Strong trainers | Manual operations |
+| Experienced trainers | Manual operations |
 | Loyal customers | Poor booking system |
 | Good location | No cloud infrastructure |
 | Good reputation | No analytics |
