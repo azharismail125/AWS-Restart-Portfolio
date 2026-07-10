@@ -11,13 +11,13 @@ Static site built for Cloud Fitness Gym, deployed to Amazon S3.
 
 | Page | Screenshot | Purpose |
 |---|---|---|
-| Home | ![Home](Website Screenshots/1. Home page.png) | Home, "why choose us" features, featured classes preview |
-| Plans | ![Plans](Website Screenshots/2. Plans.png) ![Plans continued](Website Screenshots/3. Plans continued.png) | Pricing tiers (Student / Professional / Premium), day pass, corporate & senior r[...]|
-| Classes | ![Classes](Website Screenshots/4. Classes.png) | Class descriptions + filterable weekly schedule table (by day) |
-| Booking | ![Booking](Website Screenshots/5. Booking.png) | Class booking form → submits to `confirmation.html` |
-| Contact | ![Contact](Website Screenshots/6. Contact Us.png) | Membership sign-up form + gym contact details and map → submits to `confirmation.html` |
-| Confirmation | ![Confirmation](Website Screenshots/7. Booking confirmation.png) | Reads submitted form data from the URL and displays a booking/sign-up summary with a generated reference number |
-| Error | ![Error](Website Screenshots/8. Error .png) | Custom 404, set as the S3 error document |
+| Home | ![Home](Website%20Screenshots/1.%20Home%20page.png) | Home, "why choose us" features, featured classes preview |
+| Plans | ![Plans](Website%20Screenshots/2.%20Plans.png) ![Plans continued](Website%20Screenshots/3.%20Plans%20continued.png) | Pricing tiers (Student / Professional / Premium), day pass, corporate & senior r[...] |
+| Classes | ![Classes](Website%20Screenshots/4.%20Classes.png) | Class descriptions + filterable weekly schedule table (by day) |
+| Booking | ![Booking](Website%20Screenshots/5.%20Booking.png) | Class booking form → submits to `confirmation.html` |
+| Contact | ![Contact](Website%20Screenshots/6.%20Contact%20Us.png) | Membership sign-up form + gym contact details and map → submits to `confirmation.html` |
+| Confirmation | ![Confirmation](Website%20Screenshots/7.%20Booking%20confirmation.png) | Reads submitted form data from the URL and displays a booking/sign-up summary with a generated reference number |
+| Error | ![Error](Website%20Screenshots/8.%20Error%20.png) | Custom 404, set as the S3 error document |
 
 Source files: `index.html`, `plans.html`, `classes.html`, `booking.html`, `contact.html`, `confirmation.html`, `error.html`
 
