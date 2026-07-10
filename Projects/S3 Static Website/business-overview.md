@@ -77,38 +77,64 @@ Customer → Facebook / Instagram → Phone Call → WhatsApp → Receptionist �
 ### Current Challenges
 
 **1. Manual Membership Registration**
+
 Customer fills in paper forms.
+
 Problems: lost paperwork, slow processing, duplicate records, human error.
+
 Impact: poor customer experience.
 
+
 **2. Manual Class Booking**
+
 Bookings are managed through phone calls or WhatsApp.
+
 Problems: double bookings, missed bookings, staff overwhelmed, no real-time availability.
+
 Impact: reduced customer satisfaction.
 
+
 **3. No Online Membership Purchases**
+
 Customers cannot purchase membership online.
+
 Problems: lost sales, long queues, limited operating hours.
+
 Impact: revenue loss.
 
+
 **4. No Customer Portal**
+
 Members cannot view bookings, update profiles, view memberships, or track payments.
+
 Impact: high administrative workload.
 
+
 **5. Poor Data Management**
+
 Customer information is stored in spreadsheets.
+
 Problems: no backup, difficult searching, no audit trail, data duplication.
+
 Impact: risk of data loss.
 
+
 **6. Limited Scalability**
+
 Current hosting is on a shared server.
+
 Problems: slow website, downtime, traffic limitations.
 
+
 **7. Security Risks**
+
 Current website runs over HTTP with weak passwords, no authentication, and no encryption.
 
+
 **8. Limited Reporting**
+
 Management cannot easily answer: How many members joined this month? Most popular classes? Revenue? Peak hours?
+
 
 ### SWOT Analysis
 
