@@ -1,18 +1,16 @@
-# Business Overview
+<span style="color: lightblue;"># Business Overview</span>
 
 ## Executive Summary
 
 ### Project Overview
 
-Cloud Fitness Gym is a fictional modern fitness and wellness centre undergoing a digital transformation. The current business relies heavily on manual membership registrations, phone bookings, paper records, and social media enquiries, resulting in operational inefficiencies, poor customer experience, and limited scalability.
+Cloud Fitness Gym is a fictional modern fitness and wellness centre undergoing a digital transformation. The current business relies heavily on manual membership registrations, phone bookings, paper records, and Excel spreadsheets. The objective of this project is to migrate Cloud Fitness Gym's customer-facing website and booking platform to Amazon Web Services (AWS), creating a secure, scalable, highly available, and cost-effective solution.
 
-The objective of this project is to migrate Cloud Fitness Gym's customer-facing website and booking platform to Amazon Web Services (AWS), creating a secure, scalable, highly available, and cost-effective cloud-native solution.
-
-The project demonstrates a complete cloud migration strategy, incorporating a responsive static website, serverless backend, cloud-based authentication, database services, automated notifications, monitoring, and cost optimization.
+The project demonstrates a complete cloud migration strategy, incorporating a responsive static website, serverless backend, cloud-based authentication, database services, automated notifications, monitoring, and analytics.
 
 ### Vision Statement
 
-To create a modern, cloud-native digital platform that enables Cloud Fitness Gym to deliver exceptional fitness experiences while leveraging AWS to improve operational efficiency, security, scalability, and customer engagement.
+To create a modern, cloud-native digital platform that enables Cloud Fitness Gym to deliver exceptional fitness experiences while leveraging AWS to improve operational efficiency, security, scalability, and customer satisfaction.
 
 ### Project Objectives
 
