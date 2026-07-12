@@ -1,4 +1,4 @@
-<span style="color: lightblue;"># Business Overview</span>
+# Business Overview
 
 ## Executive Summary
 
