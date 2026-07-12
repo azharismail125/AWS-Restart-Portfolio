@@ -6,7 +6,7 @@ The business in question is Cloud Fitness gym, who needed a revamp on their curr
 
 **Live:** http://cloudfitnessgym.s3-website.af-south-1.amazonaws.com
 
-## Contents
+## <span style="color: lightblue">Contents</span>
 
 | File | Covers |
 |---|---|
