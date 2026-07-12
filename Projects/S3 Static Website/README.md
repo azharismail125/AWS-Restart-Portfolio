@@ -1,4 +1,4 @@
-# Cloud Fitness Gym — AWS Static Website Hosting
+# <span style="color: lightblue">Cloud Fitness Gym — AWS Static Website Hosting</span>
 
 The following is a walk-through on our group's take on hosting a website through Amazon S3.
 
