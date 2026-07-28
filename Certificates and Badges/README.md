@@ -51,6 +51,13 @@ Design and implementation of scalable database solutions using AWS Aurora and Dy
 
 ---
 
+### Networking Concepts
+Overview of networking fundamentals including VPCs, subnets, routing, and security groups as applied to AWS architectures.
+
+<img src="Screenshots/Networking_Concepts.png" width="70%" alt="Networking Concepts Certificate">
+
+---
+
 ## Quick Links
 - [Cloud First Steps](Screenshots/Cloud_First_Steps_certificate.png)
 - [Cloud Computing Essentials](Screenshots/Cloud_Computing_Essentials.png)
@@ -59,3 +66,4 @@ Design and implementation of scalable database solutions using AWS Aurora and Dy
 - [Computing Solutions](Screenshots/Computing_Solutions.png)
 - [File Systems in the Cloud](Screenshots/File_Systems_in_the_Cloud.png)
 - [Databases in Practice](Screenshots/Databases_in_Practice.png)
+- [Networking Concepts](Screenshots/Networking_Concepts.png)
