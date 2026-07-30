@@ -58,6 +58,13 @@ Overview of networking fundamentals including VPCs, subnets, routing, and securi
 
 ---
 
+### First_noSQL_Database
+Implement a NoSQL database solution using DynamoDB.
+
+<img src="Screenshots/First_noSQL_Database.png" width="70%" alt="First NoSQL Database Certificate">
+
+---
+
 ## Quick Links
 - [Cloud First Steps](Screenshots/Cloud_First_Steps_certificate.png)
 - [Cloud Computing Essentials](Screenshots/Cloud_Computing_Essentials.png)
@@ -67,3 +74,4 @@ Overview of networking fundamentals including VPCs, subnets, routing, and securi
 - [File Systems in the Cloud](Screenshots/File_Systems_in_the_Cloud.png)
 - [Databases in Practice](Screenshots/Databases_in_Practice.png)
 - [Networking Concepts](Screenshots/Networking_Concepts.png)
+- [First NoSQL Database](Screenshots/First_noSQL_Database.png)
