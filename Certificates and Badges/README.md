@@ -59,7 +59,7 @@ Overview of networking fundamentals including VPCs, subnets, routing, and securi
 ---
 
 ### First NoSQL Database
-Implement a NoSQL database solution using DynamoDB.
+Implementation of a NoSQL database solution using DynamoDB.
 
 <img src="Screenshots/First_noSQL_Database.png" width="70%" alt="First NoSQL Database Certificate">
 
