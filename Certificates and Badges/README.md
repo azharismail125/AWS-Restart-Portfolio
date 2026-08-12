@@ -68,7 +68,7 @@ Implementation of a NoSQL database solution using DynamoDB.
 ### Core Security Concepts
 Implementation of IAM best practices for secure access management using the principle of least privilege.
 
-<img src="Screenshots/Core_Security_Concepts.png" width="70%" alt="Core Security Concepts Certificate">
+<img src="Screenshots/Core_Security_Concepts_Certificate.png" width="70%" alt="Core Security Concepts Certificate">
 
 
 ## Quick Links
