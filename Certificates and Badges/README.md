@@ -2,7 +2,7 @@
 
 ## About The Certificates
 
-# <span style="color:#00aa00;">Cloud First Steps</span>
+<h1 style="color: #00aa00;">Cloud First Steps</h1>
 Implementation of Amazon EC2 instances across multiple Availability Zones in order to increase the reliability and availability of the current stabilization system.
 
 <img src="Screenshots/Cloud_First_Steps_certificate.png" width="70%" alt="Cloud First Steps Certificate">
