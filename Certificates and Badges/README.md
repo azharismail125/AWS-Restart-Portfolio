@@ -65,6 +65,12 @@ Implement a NoSQL database solution using DynamoDB.
 
 ---
 
+### Core Security Concepts
+Implementation of IAM best practices for secure access management using the principle of least privilege.
+
+<img src="Screenshots/Core_Security_Concepts.png" width="70%" alt="Core Security Concepts Certificate">
+
+
 ## Quick Links
 - [Cloud First Steps](Screenshots/Cloud_First_Steps_certificate.png)
 - [Cloud Computing Essentials](Screenshots/Cloud_Computing_Essentials.png)
@@ -75,3 +81,4 @@ Implement a NoSQL database solution using DynamoDB.
 - [Databases in Practice](Screenshots/Databases_in_Practice.png)
 - [Networking Concepts](Screenshots/Networking_Concepts.png)
 - [First NoSQL Database](Screenshots/First_noSQL_Database.png)
+- [Core Security Concepts](Screenshots/Core_Security_Concepts.png)
