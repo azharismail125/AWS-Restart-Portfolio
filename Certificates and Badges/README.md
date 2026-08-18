@@ -70,6 +70,13 @@ Implementation of IAM best practices for secure access management using the prin
 
 <img src="Screenshots/Core_Security_Concepts_Certificate.png" width="70%" alt="Core Security Concepts Certificate">
 
+---
+
+# $\color{#00aa00}{\text{Connecting VPCs}}$
+Analysis and implementation of subnet-specific VPC peering configurations using EC2 and VPC services.
+
+<img src="Screenshots/Connecting_VPCs.png" width="70%" alt="Connecting VPCs Certificate">
+
 
 ## Quick Links
 - [Cloud First Steps](Screenshots/Cloud_First_Steps_certificate.png)
@@ -82,3 +89,4 @@ Implementation of IAM best practices for secure access management using the prin
 - [Networking Concepts](Screenshots/Networking_Concepts.png)
 - [First NoSQL Database](Screenshots/First_noSQL_Database.png)
 - [Core Security Concepts](Screenshots/Core_Security_Concepts.png)
+- [Connecting VPCs](Screenshots/Connecting_VPCs.png)
