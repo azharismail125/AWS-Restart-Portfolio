@@ -129,11 +129,11 @@ The query returns the policy document as formatted JSON, which is identical to w
 
 ![Final Result](https://img.shields.io/badge/Final%20Result-orange?style=for-the-badge)
 
-- ✅ AWS CLI v2 successfully installed on EC2 instance
-- ✅ CLI authenticated with IAM credentials
-- ✅ IAM policies listed and queried via CLI
-- ✅ Policy document exported as JSON
-- ✅ JMESPath filtering applied for structured output
+- AWS CLI v2 successfully installed on EC2 instance
+- CLI authenticated with IAM credentials
+- IAM policies listed and queried via CLI
+- Policy document exported as JSON
+- JMESPath filtering applied for structured output
 
 ---
 
