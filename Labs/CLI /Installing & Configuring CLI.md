@@ -2,7 +2,7 @@
 
 ## Architecture
 
-<img src="Screenshots/Configuring CLI.png" width="75%"/>
+<img src="Screenshots/Configuring_CLI.png" width="75%"/>
 
 I connected via SSH to an EC2 instance inside a VPC. From this instance, I used the AWS CLI to communicate directly with AWS IAM.
 ---
@@ -19,7 +19,7 @@ I connected via SSH to an EC2 instance inside a VPC. From this instance, I used 
 
 ## 1. Installing AWS CLI on the EC2 Instance
 
-<img src="Screenshots/CLI Installation on Red Hat Linux Instance.png" width="75%"/>
+<img src="Screenshots/CLI_Installation_on_Red_Hat_Linux_Instance.png" width="75%"/>
 
 I downloaded and unpacked the AWS CLI version 2 installation package:
 
@@ -34,13 +34,13 @@ unzip -u awscliv2.zip
 
 I inspected the lab_policy document directly in the AWS Management Console to review its granted permissions across CloudFormation, CloudWatch, and EC2 actions. The `lab_policy` document is a customer-managed policy.
 
-<img src="Screenshots/IAM Policy Observation.png" width="75%"/>
+<img src="Screenshots/IAM_Policy_Observation.png" width="75%"/>
 
 ---
 
 ## 3. Listing All IAM Policies via CLI.
 
-<img src="Screenshots/All Policies Listed.png" width="75%"/>
+<img src="Screenshots/All_Policies_Listed.png" width="75%"/>
 
 I queried the IAM service to list all available policies in the account:
 
@@ -56,7 +56,7 @@ This Confirmed that `lab_policy` had existed with:
 
 ## 4. Finding the Policy ARN and Version ID
 
-<img src="Screenshots/Policy ARN and Version Request.png" width="75%"/>
+<img src="Screenshots/Policy_ARN_and_Version_Request.png" width="75%"/>
 
 I filtered the results using a JMESPath query to output the ARN and version ID in a structured table:
 
@@ -70,7 +70,7 @@ aws iam list-policies \
 
 ## 5. Downloading the Policy Document as JSON
 
-<img src="Screenshots/Lab Policy Downloaded.png" width="75%"/>
+<img src="Screenshots/Lab_Policy_Downloaded.png" width="75%"/>
 
 Using the retrieved ARN and version ID, I extracted the policy document directly as formatted JSON:
 
