@@ -1,13 +1,13 @@
-# AWS CLI Configuration & IAM Policy Lab
+<h1 style="color:green">AWS CLI Configuration & IAM Policy Lab</h1>
 
-## Architecture
+<h2 style="color:green">Architecture</h2>
 
 <img src="Screenshots/Configuring_CLI.png" width="75%"/>
 
 I connected via SSH to an EC2 instance inside a VPC. From this instance, I used the AWS CLI to communicate directly with AWS IAM.
 ---
 
-## Objectives
+<h2 style="color:green">Objectives</h2>
 
 <img src="Screenshots/Objectives.png" width="75%"/>
 
@@ -17,7 +17,7 @@ I connected via SSH to an EC2 instance inside a VPC. From this instance, I used 
 
 ---
 
-## 1. Installing AWS CLI on the EC2 Instance
+<h2 style="color:green">1. Installing AWS CLI on the EC2 Instance</h2>
 
 <img src="Screenshots/CLI_Installation_on_Red_Hat_Linux_Instance.png" width="75%"/>
 
@@ -30,15 +30,15 @@ unzip -u awscliv2.zip
 
 ---
 
-## 2. Observing the `lab_policy` in the AWS Console.
+<h2 style="color:green">2. Observing the `lab_policy` in the AWS Console.</h2>
 
-I inspected the lab_policy document directly in the AWS Management Console to review its granted permissions across CloudFormation, CloudWatch, and EC2 actions. The `lab_policy` document is a customer-managed policy.
+I inspected the lab_policy document directly in the AWS Management Console to review its granted permissions across CloudFormation, CloudWatch, and EC2 actions. The `lab_policy` document is a cust[...]
 
 <img src="Screenshots/IAM_Policy_Observation.png" width="75%"/>
 
 ---
 
-## 3. Listing All IAM Policies via CLI.
+<h2 style="color:green">3. Listing All IAM Policies via CLI.</h2>
 
 <img src="Screenshots/All_Policies_Listed.png" width="75%"/>
 
@@ -54,7 +54,7 @@ This Confirmed that `lab_policy` had existed with:
 
 ---
 
-## 4. Finding the Policy ARN and Version ID
+<h2 style="color:green">4. Finding the Policy ARN and Version ID</h2>
 
 <img src="Screenshots/Policy_ARN_and_Version_Request.png" width="75%"/>
 
@@ -68,7 +68,7 @@ aws iam list-policies \
 
 ---
 
-## 5. Downloading the Policy Document as JSON
+<h2 style="color:green">5. Downloading the Policy Document as JSON</h2>
 
 <img src="Screenshots/Lab_Policy_Downloaded.png" width="75%"/>
 
