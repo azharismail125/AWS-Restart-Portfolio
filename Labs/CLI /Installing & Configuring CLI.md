@@ -1,16 +1,15 @@
-
 # AWS CLI Configuration & IAM Policy Lab
 
 ## Architecture
 
-<img src="images/1__Configuring_CLI.png" width="75%"/>
+<img src="Screenshots/Configuring CLI.png" width="75%"/>
 
 I connected via SSH to an EC2 instance inside a VPC. From this instance, I used the AWS CLI to communicate directly with AWS IAM.
 ---
 
 ## Objectives
 
-<img src="images/2__Objectives.png" width="75%"/>
+<img src="Screenshots/Objectives.png" width="75%"/>
 
 - Install and configure the AWS CLI
 - Connect the AWS CLI to an AWS account
@@ -20,7 +19,7 @@ I connected via SSH to an EC2 instance inside a VPC. From this instance, I used 
 
 ## 1. Installing AWS CLI on the EC2 Instance
 
-<img src="images/3__CLI_Installation_on_Red_Hat_Linux_Instance.png" width="75%"/>
+<img src="Screenshots/CLI Installation on Red Hat Linux Instance.png" width="75%"/>
 
 I downloaded and unpacked the AWS CLI version 2 installation package:
 
@@ -33,16 +32,15 @@ unzip -u awscliv2.zip
 
 ## 2. Observing the `lab_policy` in the AWS Console.
 
-I inspected the lab_policy document directly in the AWS Management Console to review its granted permissions across CloudFormation, CloudWatch, and EC2 actions. The `lab_policy` document is a customer-managed IAM policy granting scoped permissions across CloudFormation, CloudWatch, EC2, and other services.
+I inspected the lab_policy document directly in the AWS Management Console to review its granted permissions across CloudFormation, CloudWatch, and EC2 actions. The `lab_policy` document is a customer-managed policy.
 
-
-<img src="images/4__IAM_Policy_Observation.png" width="75%"/>
+<img src="Screenshots/IAM Policy Observation.png" width="75%"/>
 
 ---
 
 ## 3. Listing All IAM Policies via CLI.
 
-<img src="images/5__All_Policies_Listed.png" width="75%"/>
+<img src="Screenshots/All Policies Listed.png" width="75%"/>
 
 I queried the IAM service to list all available policies in the account:
 
@@ -58,7 +56,7 @@ This Confirmed that `lab_policy` had existed with:
 
 ## 4. Finding the Policy ARN and Version ID
 
-<img src="images/6__Policy_ARN_and_Version_Request.png" width="75%"/>
+<img src="Screenshots/Policy ARN and Version Request.png" width="75%"/>
 
 I filtered the results using a JMESPath query to output the ARN and version ID in a structured table:
 
@@ -72,7 +70,7 @@ aws iam list-policies \
 
 ## 5. Downloading the Policy Document as JSON
 
-<img src="images/7__Lab_Policy_Downloaded.png" width="75%"/>
+<img src="Screenshots/Lab Policy Downloaded.png" width="75%"/>
 
 Using the retrieved ARN and version ID, I extracted the policy document directly as formatted JSON:
 
