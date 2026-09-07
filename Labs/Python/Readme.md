@@ -1,6 +1,7 @@
 # Python Labs
 
-Hands-on introductory Python exercises completed.
+Completed hands-on introductory Python exercises.
+
 The topics progress from language basics through composite data structures and file I/O.
 
 ---
