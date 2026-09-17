@@ -2,7 +2,7 @@
 
 ## Overview
 
-Built a serverless HR Assistant using **Amazon Bedrock AgentCore** with RAG (Retrieval-Augmented Generation), Lambda actions, and DynamoDB persistence. The assistant handles HR policy queries and proc[...]
+Built a serverless HR Assistant using **Amazon Bedrock AgentCore** with RAG (Retrieval-Augmented Generation), Lambda actions, and DynamoDB. The assistant handles HR policy queries and processes leave/benefits submissions through a Streamlit chat UI and provides a confirmation in DynamoDB after the Lambda function is triggered.
 
 ---
 
@@ -159,7 +159,7 @@ Items returned: 1 · Efficiency: 100%
 
 Added `submitBenefits` as a third gateway target (Lambda ARN for `submit_benefits`).
 
-Submitted a benefits claim through the chat UI with an incomplete request first — the agent correctly identified the missing `claim_amount` parameter and prompted for it before proceeding.
+Submitted a benefits claim through the chat UI with an incomplete request first resulting in the agent correctly identified the missing `claim_amount` parameter and prompted for it before proceeding.
 
 **Conversation flow:**
 
