@@ -2,13 +2,15 @@
 
 ## Overview
 
-Built a serverless HR Assistant using **Amazon Bedrock AgentCore** with RAG (Retrieval-Augmented Generation), Lambda actions, and DynamoDB. The assistant handles HR policy queries and processes leave/benefits submissions through a Streamlit chat UI and provides a confirmation in DynamoDB after the Lambda function is triggered.
+Built a serverless HR Assistant using **Amazon Bedrock AgentCore** with RAG (Retrieval-Augmented Generation), Lambda actions, and DynamoDB. The assistant handles HR policy queries and processes leave/benefits claims within a conversational interface and provides a confirmation in DynamoDB after the Lambda function is triggered.
 
 ---
 
 ## Architecture
 
-<img src="Screenshots/1.%20Architecture.png" alt="Architecture Diagram" width="70%">
+<div align="center">
+  <img src="Screenshots/1.%20Architecture.png" alt="Architecture Diagram" width="70%">
+</div>
 
 **Components:**
 
@@ -48,7 +50,9 @@ Key guidelines in the prompt:
 - Gather all required parameters before calling an action tool
 - Never invent policy content; direct to HR if no relevant content is found
 
-<img src="Screenshots/2.%20Main%20system%20prompt%20found%20in%20S3.png" alt="System Prompt" width="70%">
+<div align="center">
+  <img src="Screenshots/2.%20Main%20system%20prompt%20found%20in%20S3.png" alt="System Prompt" width="70%">
+</div>
 
 ---
 
@@ -61,7 +65,9 @@ The S3 knowledge base data source contained the employee handbook, including com
 - Retirement: 401(k) with 6% company match, immediate vesting
 - Additional: life/disability insurance, $2,000 professional development allowance, gym reimbursement, remote work stipend
 
-<img src="Screenshots/3.%20Review%20of%20employee%20compensation%20handbook.png" alt="Handbook" width="70%">
+<div align="center">
+  <img src="Screenshots/3.%20Review%20of%20employee%20compensation%20handbook.png" alt="Handbook" width="70%">
+</div>
 
 ---
 
@@ -76,7 +82,9 @@ Created the `hr-knowledge-base` in Bedrock with:
 
 Syncing the data source was initiated immediately after creation.
 
-<img src="Screenshots/4.%20Creation%20of%20a%20managed%20knowledge%20base%20with%20an%20s3%20data%20source.png" alt="Knowledge Base" width="70%">
+<div align="center">
+  <img src="Screenshots/4.%20Creation%20of%20a%20managed%20knowledge%20base%20with%20an%20s3%20data%20source.png" alt="Knowledge Base" width="70%">
+</div>
 
 ---
 
@@ -84,7 +92,9 @@ Syncing the data source was initiated immediately after creation.
 
 Added `hrKnowledgeBase` as the first target in the **hr-assistant-gateway** to expose the KB as a retrieval tool via MCP.
 
-<img src="Screenshots/5.%20Target%20creation.png" alt="KB Target" width="70%">
+<div align="center">
+  <img src="Screenshots/5.%20Target%20creation.png" alt="KB Target" width="70%">
+</div>
 
 **Gateway details:**
 
@@ -103,7 +113,9 @@ Retrieved the Streamlit chat UI URL from CloudFormation stack outputs.
 - **Stack:** CREATE_COMPLETE
 - **ApplicationUrl:** Streamlit chat UI hosted on an ELB endpoint
 
-<img src="Screenshots/6.%20Application%20URL%20from%20cloudformation.png" alt="CloudFormation Output" width="70%">
+<div align="center">
+  <img src="Screenshots/6.%20Application%20URL%20from%20cloudformation.png" alt="CloudFormation Output" width="70%">
+</div>
 
 ---
 
@@ -117,7 +129,9 @@ Queried the assistant via the chat UI:
 
 Confirms the knowledge base retrieval tool is working correctly.
 
-<img src="Screenshots/7.%20HR%20Assistant%20response.png" alt="HR Assistant Response" width="70%">
+<div align="center">
+  <img src="Screenshots/7.%20HR%20Assistant%20response.png" alt="HR Assistant Response" width="70%">
+</div>
 
 ---
 
@@ -125,7 +139,9 @@ Confirms the knowledge base retrieval tool is working correctly.
 
 Added `submitLeave` as a second target in the gateway, pointing to the `submit_leave` Lambda function ARN.
 
-<img src="Screenshots/8.%20Submit%20Leave%20target%20created%20with%20Lambda%20ARN.png" alt="submitLeave Target" width="70%">
+<div align="center">
+  <img src="Screenshots/8.%20Submit%20Leave%20target%20created%20with%20Lambda%20ARN.png" alt="submitLeave Target" width="70%">
+</div>
 
 ---
 
@@ -137,7 +153,9 @@ Submitted a leave request through the chat UI:
 
 **Response:** Leave request submitted successfully.
 
-<img src="Screenshots/9.%20Submit%20Leave%20Test%20with%20HR%20Assistant.png" alt="Leave Submission" width="70%">
+<div align="center">
+  <img src="Screenshots/9.%20Submit%20Leave%20Test%20with%20HR%20Assistant.png" alt="Leave Submission" width="70%">
+</div>
 
 ---
 
@@ -151,7 +169,9 @@ Scanned the `VacationTable` in DynamoDB to confirm the record was written.
 
 Items returned: 1 · Efficiency: 100%
 
-<img src="Screenshots/10.%20Confirmed%20leave%20request%20received%20through%20DynamDB.png" alt="DynamoDB Leave Record" width="70%">
+<div align="center">
+  <img src="Screenshots/10.%20Confirmed%20leave%20request%20received%20through%20DynamDB.png" alt="DynamoDB Leave Record" width="70%">
+</div>
 
 ---
 
@@ -171,7 +191,9 @@ Submitted a benefits claim through the chat UI with an incomplete request first 
 6. User: *"Submit a $150 benefit request for Jane Austin, dental, starting on 19-09 and ending on 21-09"*
 7. Agent: *"The benefits claim for Jane Austin, dental, in the amount of $150, has been submitted successfully."*
 
-<img src="Screenshots/11.%20Submit%20benefit%20request%20with%20errors%20if%20the%20parameters%20are%20not%20followed.png" alt="Benefits Submission" width="70%">
+<div align="center">
+  <img src="Screenshots/11.%20Submit%20benefit%20request%20with%20errors%20if%20the%20parameters%20are%20not%20followed.png" alt="Benefits Submission" width="70%">
+</div>
 
 ---
 
@@ -185,7 +207,9 @@ Scanned the `BenefitsTable` in DynamoDB to confirm the record was written.
 
 Items returned: 1 · Efficiency: 100%
 
-<img src="Screenshots/12.%20Verified%20claim%20with%20DynamoDB.png" alt="DynamoDB Benefits Record" width="70%">
+<div align="center">
+  <img src="Screenshots/12.%20Verified%20claim%20with%20DynamoDB.png" alt="DynamoDB Benefits Record" width="70%">
+</div>
 
 ---
 
