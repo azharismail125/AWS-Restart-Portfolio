@@ -80,7 +80,7 @@ Analysis and implementation of subnet-specific VPC peering configurations using 
 ---
 
 # $\color{#00aa00}{\text{Create an AI Smart Assistant}}$
-
+Creation of a smart assistant for company HR information and requests.
 <img src="Screenshots/Create_An_AI_Smart_Assistant.png" width="70%" alt="Create an AI Smart Assistant Certificate">
 
 
