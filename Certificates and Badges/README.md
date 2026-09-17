@@ -77,6 +77,12 @@ Analysis and implementation of subnet-specific VPC peering configurations using 
 
 <img src="Screenshots/Connecting_VPCs.png" width="70%" alt="Connecting VPCs Certificate">
 
+---
+
+# $\color{#00aa00}{\text{Create an AI Smart Assistant}}$
+
+<img src="Screenshots/Create_An_AI_Smart_Assistant.png" width="70%" alt="Create an AI Smart Assistant Certificate">
+
 
 ## Quick Links
 - [Cloud First Steps](Screenshots/Cloud_First_Steps_certificate.png)
@@ -90,3 +96,4 @@ Analysis and implementation of subnet-specific VPC peering configurations using 
 - [First NoSQL Database](Screenshots/First_noSQL_Database.png)
 - [Core Security Concepts](Screenshots/Core_Security_Concepts.png)
 - [Connecting VPCs](Screenshots/Connecting_VPCs.png)
+- [Create an AI Smart Assistant](Screenshots/Create_An_AI_Smart_Assistant.png)
