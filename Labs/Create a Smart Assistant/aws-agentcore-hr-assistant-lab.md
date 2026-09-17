@@ -8,7 +8,7 @@ Built a serverless HR Assistant using **Amazon Bedrock AgentCore** with RAG (Ret
 
 ## Architecture
 
-![Architecture Diagram](Screenshots/1.%20Architecture.png)
+<img src="Screenshots/1.%20Architecture.png" alt="Architecture Diagram" width="70%">
 
 **Components:**
 
@@ -48,7 +48,7 @@ Key guidelines in the prompt:
 - Gather all required parameters before calling an action tool
 - Never invent policy content; direct to HR if no relevant content is found
 
-![System Prompt](Screenshots/2.%20Main%20system%20prompt%20found%20in%20S3.png)
+<img src="Screenshots/2.%20Main%20system%20prompt%20found%20in%20S3.png" alt="System Prompt" width="70%">
 
 ---
 
@@ -61,7 +61,7 @@ The S3 knowledge base data source contained the employee handbook, including com
 - Retirement: 401(k) with 6% company match, immediate vesting
 - Additional: life/disability insurance, $2,000 professional development allowance, gym reimbursement, remote work stipend
 
-![Handbook](Screenshots/3.%20Review%20of%20employee%20compensation%20handbook.png)
+<img src="Screenshots/3.%20Review%20of%20employee%20compensation%20handbook.png" alt="Handbook" width="70%">
 
 ---
 
@@ -76,7 +76,7 @@ Created the `hr-knowledge-base` in Bedrock with:
 
 Syncing the data source was initiated immediately after creation.
 
-![Knowledge Base](Screenshots/4.%20Creation%20of%20a%20managed%20knowledge%20base%20with%20an%20s3%20data%20source.png)
+<img src="Screenshots/4.%20Creation%20of%20a%20managed%20knowledge%20base%20with%20an%20s3%20data%20source.png" alt="Knowledge Base" width="70%">
 
 ---
 
@@ -84,7 +84,7 @@ Syncing the data source was initiated immediately after creation.
 
 Added `hrKnowledgeBase` as the first target in the **hr-assistant-gateway** to expose the KB as a retrieval tool via MCP.
 
-![KB Target](Screenshots/5.%20Target%20creation.png)
+<img src="Screenshots/5.%20Target%20creation.png" alt="KB Target" width="70%">
 
 **Gateway details:**
 
@@ -103,7 +103,7 @@ Retrieved the Streamlit chat UI URL from CloudFormation stack outputs.
 - **Stack:** CREATE_COMPLETE
 - **ApplicationUrl:** Streamlit chat UI hosted on an ELB endpoint
 
-![CloudFormation Output](Screenshots/6.%20Application%20URL%20from%20cloudformation.png)
+<img src="Screenshots/6.%20Application%20URL%20from%20cloudformation.png" alt="CloudFormation Output" width="70%">
 
 ---
 
@@ -117,7 +117,7 @@ Queried the assistant via the chat UI:
 
 Confirms the knowledge base retrieval tool is working correctly.
 
-![HR Assistant Response](Screenshots/7.%20HR%20Assistant%20response.png)
+<img src="Screenshots/7.%20HR%20Assistant%20response.png" alt="HR Assistant Response" width="70%">
 
 ---
 
@@ -125,7 +125,7 @@ Confirms the knowledge base retrieval tool is working correctly.
 
 Added `submitLeave` as a second target in the gateway, pointing to the `submit_leave` Lambda function ARN.
 
-![submitLeave Target](Screenshots/8.%20Submit%20Leave%20target%20created%20with%20Lambda%20ARN.png)
+<img src="Screenshots/8.%20Submit%20Leave%20target%20created%20with%20Lambda%20ARN.png" alt="submitLeave Target" width="70%">
 
 ---
 
@@ -137,7 +137,7 @@ Submitted a leave request through the chat UI:
 
 **Response:** Leave request submitted successfully.
 
-![Leave Submission](Screenshots/9.%20Submit%20Leave%20Test%20with%20HR%20Assistant.png)
+<img src="Screenshots/9.%20Submit%20Leave%20Test%20with%20HR%20Assistant.png" alt="Leave Submission" width="70%">
 
 ---
 
@@ -151,7 +151,7 @@ Scanned the `VacationTable` in DynamoDB to confirm the record was written.
 
 Items returned: 1 · Efficiency: 100%
 
-![DynamoDB Leave Record](Screenshots/10.%20Confirmed%20leave%20request%20received%20through%20DynamDB.png)
+<img src="Screenshots/10.%20Confirmed%20leave%20request%20received%20through%20DynamDB.png" alt="DynamoDB Leave Record" width="70%">
 
 ---
 
@@ -171,7 +171,7 @@ Submitted a benefits claim through the chat UI with an incomplete request first 
 6. User: *"Submit a $150 benefit request for Jane Austin, dental, starting on 19-09 and ending on 21-09"*
 7. Agent: *"The benefits claim for Jane Austin, dental, in the amount of $150, has been submitted successfully."*
 
-![Benefits Submission](Screenshots/11.%20Submit%20benefit%20request%20with%20errors%20if%20the%20parameters%20are%20not%20followed.png)
+<img src="Screenshots/11.%20Submit%20benefit%20request%20with%20errors%20if%20the%20parameters%20are%20not%20followed.png" alt="Benefits Submission" width="70%">
 
 ---
 
@@ -185,7 +185,7 @@ Scanned the `BenefitsTable` in DynamoDB to confirm the record was written.
 
 Items returned: 1 · Efficiency: 100%
 
-![DynamoDB Benefits Record](Screenshots/12.%20Verified%20claim%20with%20DynamoDB.png)
+<img src="Screenshots/12.%20Verified%20claim%20with%20DynamoDB.png" alt="DynamoDB Benefits Record" width="70%">
 
 ---
 
