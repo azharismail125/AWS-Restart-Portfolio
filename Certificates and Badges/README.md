@@ -83,6 +83,12 @@ Analysis and implementation of subnet-specific VPC peering configurations using 
 Creation of a smart assistant for company HR information and requests.
 <img src="Screenshots/Create_An_AI_Smart_Assistant.png" width="70%" alt="Create an AI Smart Assistant Certificate">
 
+---
+
+# $\color{#00aa00}{\text{Use AI Services}}$
+Use AI Services with Amazon SageMaker AI to view, transcribe and verify audio output recorded in S3.
+
+<img src="Screenshots/Use AI Services.png" width="70%" alt="Use AI Services Certificate">
 
 ## Quick Links
 - [Cloud First Steps](Screenshots/Cloud_First_Steps_certificate.png)
@@ -97,3 +103,4 @@ Creation of a smart assistant for company HR information and requests.
 - [Core Security Concepts](Screenshots/Core_Security_Concepts.png)
 - [Connecting VPCs](Screenshots/Connecting_VPCs.png)
 - [Create an AI Smart Assistant](Screenshots/Create_An_AI_Smart_Assistant.png)
+- [Use AI Services](Screenshots/Use%20AI%20Services.png)
