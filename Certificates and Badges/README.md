@@ -88,7 +88,7 @@ Creation of a smart assistant for company HR information and requests.
 # $\color{#00aa00}{\text{Use AI Services}}$
 Use AI Services with Amazon SageMaker AI to view, transcribe and verify audio output recorded in S3.
 
-<img src="Screenshots/Use_AI_Services" width="70%" alt="Use AI Services Certificate">
+<img src="Screenshots/Use_AI_Services.png" width="70%" alt="Use AI Services Certificate">
 
 ## Quick Links
 - [Cloud First Steps](Screenshots/Cloud_First_Steps_certificate.png)
