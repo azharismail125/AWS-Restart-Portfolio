@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D E-Commerce Platform Architecture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:          #0F172A;
+      --surface:     #1E293B;
+      --border:      #334155;
+      --text:        #CBD5E1;
+      --text-strong: #F1F5F9;
+      --green:       #4ADE80;
+      --orange:      #FB923C;
+      --muted:       #64748B;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      padding: 52px 24px 96px;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    .doc-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 36px;
+      margin-bottom: 52px;
+    }
+
+    .doc-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+
+    .doc-intro {
+      color: var(--text);
+      max-width: 660px;
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 52px;
+      padding-left: 22px;
+      border-left: 3px solid var(--green);
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 26px;
+    }
+
+    /* ── Service blocks ── */
+    .block {
+      margin-bottom: 22px;
+    }
+
+    .block p,
+    .item p {
+      color: var(--text);
+    }
+
+    /* ── Inline service name ── */
+    .svc {
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    /* ── Requirement / trade-off label ── */
+    .item {
+      margin-bottom: 18px;
+    }
+
+    .item-label {
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <header class="doc-header">
+    <p class="doc-label">AWS re/Start — Group Project</p>
+    <h1>3D E-Commerce Platform Architecture</h1>
+    <p class="doc-intro">This document covers the cloud architecture for a 3D e-commerce web application. The platform lets users view and interact with 3D product models — furniture, gadgets, and fashion items — before buying them online.</p>
+  </header>
+
+  <!-- Section 1 -->
+  <section class="section">
+    <h2>1. AWS Service Choices</h2>
+
+    <div class="block">
+      <p><span class="svc">Amazon S3</span> is the primary storage for static assets and 3D model files. When a seller uploads a model, S3 fires an event to trigger backend processing. Public access is blocked to prevent unauthorized access and reduce exposure to the internet.</p>
+    </div>
+
+    <div class="block">
+      <p><span class="svc">Amazon CloudFront</span> is a Content Delivery Network that caches 3D assets at edge locations globally. This reduces repeated origin requests and keeps load times fast for users regardless of where they are situated.</p>
+    </div>
+
+    <div class="block">
+      <p><span class="svc">EC2</span> with <span class="svc">AWS Lambda</span>: EC2 runs continuously for core backend work — session management, cart operations, and checkouts — across multiple Availability Zones. Lambda handles stateless, event-driven tasks such as image processing or file validation, which is useful when workloads spike unexpectedly.</p>
+    </div>
+
+    <div class="block">
+      <p><span class="svc">RDS</span> instead of <span class="svc">DynamoDB</span>: RDS handles transactional relational data — inventory, orders, customer records — where strict data integrity matters. DynamoDB was considered but RDS is a better fit for complex, relational inventory and order systems.</p>
+    </div>
+
+    <div class="block">
+      <p><span class="svc">Elastic Load Balancer (ELB)</span>: The <span class="svc">Application Load Balancer</span> distributes dynamic traffic across healthy EC2 instances using continuous health checks, and accounts for rapid increases or decreases in traffic.</p>
+    </div>
+
+    <div class="block">
+      <p><span class="svc">Amazon Route 53</span> handles DNS and domain routing. It performs health checks and fails over to backup resources automatically if a primary component goes down.</p>
+    </div>
+
+    <div class="block">
+      <p><span class="svc">CloudWatch</span> &amp; <span class="svc">Trusted Advisor</span>: CloudWatch tracks application health, EC2 utilization under heavy 3D rendering load, and Lambda invocations. Trusted Advisor flags opportunities to improve performance, security, and cost efficiency across the AWS environment.</p>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="section">
+    <h2>2. Meeting the 5 Key Requirements</h2>
+
+    <div class="item">
+      <p><span class="item-label">High Availability:</span> Multi-AZ <span class="svc">EC2</span> deployment means a single data center outage won't drop active shopping sessions. <span class="svc">Route 53</span> and the <span class="svc">Application Load Balancer</span> only route traffic to healthy instances.</p>
+    </div>
+
+    <div class="item">
+      <p><span class="item-label">Scalability:</span> <span class="svc">Auto Scaling</span> adjusts the EC2 fleet based on demand. <span class="svc">CloudFront</span> handles delivery of large 3D assets globally without adding load on the backend.</p>
+    </div>
+
+    <div class="item">
+      <p><span class="item-label">Performance:</span> Caching 3D content at <span class="svc">CloudFront</span> edge locations means fast page loads and smooth rendering regardless of the user's location.</p>
+    </div>
+
+    <div class="item">
+      <p><span class="item-label">Security:</span> The backend sits in a <span class="svc">VPC</span> with private subnets so there's no direct internet exposure. <span class="svc">S3</span> buckets are private, accessed only through <span class="svc">CloudFront</span>. <span class="svc">AWS WAF</span> filters malicious traffic, <span class="svc">Security Groups</span> restrict inbound access, and <span class="svc">IAM</span> policies control who can alter resources.</p>
+    </div>
+
+    <div class="item">
+      <p><span class="item-label">Cost Optimization:</span> <span class="svc">Lambda</span> handles intermittent model processing to avoid idle EC2 costs. <span class="svc">Auto Scaling</span> uses minimum and maximum thresholds to prevent over-provisioning during both quiet and peak periods.</p>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="section">
+    <h2>3. Design Trade-offs &amp; Challenges</h2>
+
+    <div class="item">
+      <p><span class="item-label">EC2 and Lambda:</span> <span class="svc">EC2</span> handles continuous sessions reliably but requires active capacity planning. <span class="svc">Lambda</span> drops server management overhead for 3D model processing but brings cold starts and potential latency during first-time requests.</p>
+    </div>
+
+    <div class="item">
+      <p><span class="item-label">Performance and Cost:</span> Intense caching, extra compute, or provisioned concurrency can improve responsiveness but will also raise spend and configuration complexity.</p>
+    </div>
+
+    <div class="item">
+      <p><span class="item-label">Simplicity vs Resilience:</span> Multi-Availability Zone and load-balanced infrastructure prevents downtime but costs more and is more complex to manage than a single-server setup.</p>
+    </div>
+
+    <div class="item">
+      <p><span class="item-label">Public vs. Private Origin:</span> Keeping the <span class="svc">ALB</span> private behind <span class="svc">CloudFront</span> shields the backend from unwanted direct internet exposure but requires more <span class="svc">VPC</span> work — <span class="svc">NAT gateways</span>, routing rules, and careful security boundary design.</p>
+    </div>
+
+    <div class="item">
+      <p><span class="item-label">Scaling Dependencies:</span> A sudden spike from a popular product launch triggers rapid <span class="svc">Auto Scaling</span>, which can create connection pressure on downstream components like <span class="svc">RDS</span>. System-wide monitoring is needed to detect and mitigate these bottlenecks before customers notice.</p>
+    </div>
+  </section>
+
+  <footer>AWS re/Start Programme &mdash; Cloud Architecture Portfolio</footer>
+
+</div>
+</body>
+</html>
