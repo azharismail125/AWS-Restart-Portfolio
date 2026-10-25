@@ -1,6 +1,6 @@
-3D E-Commerce Platform Architecture
-This document covers the cloud architecture for a 3D e-commerce web application. The platform lets users view and interact with 3D product models such as furniture, gadgets and fashion items before buying them online.
+<h2 style="color: green; font-weight: bold;">3D E-Commerce Platform Architecture</h2>
 
+This document covers the cloud architecture for a 3D e-commerce web application. The platform lets users view and interact with 3D product models such as furniture, gadgets and fashion items before buying them online.
 
 
 <h2 style="color: green; font-weight: bold;">1. AWS Service Choices</h2>
