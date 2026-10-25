@@ -3,7 +3,7 @@ This document covers the cloud architecture for a 3D e-commerce web application.
 
 
 
-## **1. AWS Service Choices**
+<h2 style="color: green; font-weight: bold;">1. AWS Service Choices</h2>
    
 Amazon S3: This is the primary storage for static assets and 3D model files. When a seller uploads a model, S3 fires an event to trigger backend processing. Public access is blocked to prevent unauthorized access and reduce exposure to the internet.
 
@@ -21,7 +21,7 @@ CloudWatch & Trusted Advisor: CloudWatch tracks application health, EC2 utilizat
 
 
 
-## **2. Meeting the 5 Key Requirements**
+<h2 style="color: green; font-weight: bold;">2. Meeting the 5 Key Requirements</h2>
    
 High Availability: Multi-AZ EC2 deployment means a single data center outage won't drop active shopping sessions. Route 53 and the ALB only route traffic to healthy instances.
 
@@ -34,7 +34,7 @@ Cost Optimization: Lambda handles intermittent model processing to avoid idle EC
 
 
 
-## **3. Design Trade-offs & Challenges**
+<h2 style="color: green; font-weight: bold;">3. Design Trade-offs & Challenges</h2>
 
 EC2 and Lambda: EC2 handles continuous sessions reliably but requires active capacity planning. Lambda drops the server management overhead for 3D model processing but brings cold starts and potential latency during first-time requests.
 
