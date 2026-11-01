@@ -184,7 +184,7 @@ Displays a log of all simulated trips, the events detected during each one, the 
 
 ---
 
-## ![Tech Stack](https://img.shields.io/badge/App%20Walkthrough-green?style=for-the-badge)
+## ![Tech Stack](https://img.shields.io/badge/Tech%20Stack-green?style=for-the-badge)
 
 **Frontend**
 - React with TypeScript
@@ -202,7 +202,7 @@ Displays a log of all simulated trips, the events detected during each one, the 
 
 ---
 
-## <span style="color: green;">Out of Scope</span>
+## ![Out Of Scope](https://img.shields.io/badge/Out%20of%20Scope-green?style=for-the-badge)
 
 The following were not built during for this version and are listed as future work:
 
@@ -217,7 +217,7 @@ The following were not built during for this version and are listed as future wo
 
 ---
 
-## ![Privacy % Security](https://img.shields.io/badge/App%20Walkthrough-green?style=for-the-badge)
+## ![Privacy % Security](https://img.shields.io/badge/Privacy%20and%20Security-green?style=for-the-badge)
 
 - All trip, driver, and passenger data in the prototype is simulated
 - No real location information is collected during the demo
