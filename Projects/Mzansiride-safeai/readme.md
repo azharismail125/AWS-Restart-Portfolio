@@ -10,13 +10,13 @@ Hackathon Theme: AI for Real-World Impact | Built on AWS | 24-hour prototype
 
 ## The Problem
 
-Using transport in South Africa comes with real concerns. Women and vulnerable passengers worry about unexpected route changes, prolonged stops, travelling with unfamiliar drivers, and whether anyone they trust knows where they are. Transport costs add another layer for daily commuters and students.
+Using transport in South Africa comes with real concerns. Women and vulnerable passengers worry about unexpected route changes, prolonged stops, travelling with unfamiliar drivers, and whether anyone will be there if something goes wrong.
 
 There are apps that address parts of this. Not many that bring journey monitoring, passenger check-ins, and AI-assisted safety guidance into a single workflow, especially not in a South African context.
 
 ## What We Built
 
-MzansiRide SafeAI is a responsive web app that walks a passenger through an end-to-end simulated journey, from booking to safety event handling. It uses predefined backend rules to detect unusual events during a trip, prompts the passenger to check in, and provides contextual guidance through an AI assistant powered by Amazon Bedrock.
+MzansiRide SafeAI is a responsive web app that walks a passenger through an end-to-end simulated journey, from booking to safety event handling. It uses predefined backend rules to detect unusual events such as prolonged stops or unexpected route changes.
 
 A basic fare comparison between individual and shared rides is also included.
 
@@ -76,7 +76,7 @@ No privileged AWS credentials are placed in the frontend code. Backend operation
 
 Retrieves the current alert status for a trip. The test result shows a 200 response with CORS headers confirming the function is working correctly.
 
-![Lambda getAlertStatus with successful test](./Screenshots/1%20Lambda%20AlertStatus%20and%20Test.png)
+<img src="./Screenshots/1%20Lambda%20AlertStatus%20and%20Test.png" alt="Lambda getAlertStatus with successful test" width="65%" />
 
 ---
 
@@ -84,7 +84,7 @@ Retrieves the current alert status for a trip. The test result shows a 200 respo
 
 Triggered via API Gateway. Takes the passenger's booking details, processes the request, and applies the safety monitoring logic.
 
-![Lambda processRideRequest with API Gateway trigger and successful test]](./Screenshots/2%20Lambda%20Process%20Ride%20with%20Test.png)
+<img src="./Screenshots/2%20Lambda%20Process%20Ride%20with%20Test.png" alt="Lambda processRideRequest with API Gateway trigger and successful test" width="65%" />
 
 ---
 
@@ -92,15 +92,15 @@ Triggered via API Gateway. Takes the passenger's booking details, processes the 
 
 Connected to Amazon SNS. Fires when a predefined safety event is detected during a simulated trip, such as a prolonged stop or a route deviation.
 
-![Lambda triggerSafetyEvent with SNS trigger and successful test](./Screenshots/3%20Lambda%20Safety%20With%20Test.png)
+<img src="./Screenshots/3%20Lambda%20Safety%20With%20Test.png" alt="Lambda triggerSafetyEvent with SNS trigger and successful test" width="65%" />
 
 ---
 
 ### API Gateway
 
-Three routes are configured: `POST /ride/request`, `POST /safety-event`, and `GET /status`. All three use Lambda proxy integration, which means API Gateway passes the full request directly to Lambda and returns whatever Lambda sends back.
+Three routes are configured: `POST /ride/request`, `POST /safety-event`, and `GET /status`. All three use Lambda proxy integration, which means API Gateway passes the full request directly to Lambda and returns responses to the frontend.
 
-![API Gateway resource and method configuration](./Screenshots/4%20API%20Gateway%20Setup.png)
+<img src="./Screenshots/4%20API%20Gateway%20Setup.png" alt="API Gateway resource and method configuration" width="65%" />
 
 ---
 
@@ -108,7 +108,7 @@ Three routes are configured: `POST /ride/request`, `POST /safety-event`, and `GE
 
 The `SafeRideAlerts` topic has a confirmed email subscription. This is the channel used to notify a trusted contact when the passenger triggers a notification from the alert screen.
 
-![SNS SafeRideAlerts topic with confirmed email subscription](./Screenshots/5%20SNS%20Confirmation.png)
+<img src="./Screenshots/5%20SNS%20Confirmation.png" alt="SNS SafeRideAlerts topic with confirmed email subscription" width="65%" />
 
 ---
 
@@ -116,7 +116,7 @@ The `SafeRideAlerts` topic has a confirmed email subscription. This is the chann
 
 The `SafeRideTrips` table stores trip records. Each item uses `tripId` as the partition key and includes fields like `driver` and `status` to track the trip and any safety events recorded against it.
 
-![DynamoDB SafeRideTrips table with sample trip item](./Screenshots/6%20DynamoDB%20Setup.png)
+<img src="./Screenshots/6%20DynamoDB%20Setup.png" alt="DynamoDB SafeRideTrips table with sample trip item" width="65%" />
 
 ---
 
@@ -124,7 +124,7 @@ The `SafeRideTrips` table stores trip records. Each item uses `tripId` as the pa
 
 A user pool is configured and available for authentication. For the hackathon demo, login is optional and the app can be accessed without it.
 
-![Amazon Cognito user pool overview](./Screenshots/7%20Cognito%20Setup.png)
+<img src="./Screenshots/7%20Cognito%20Setup.png" alt="Amazon Cognito user pool overview" width="65%" />
 
 ---
 
@@ -132,7 +132,7 @@ A user pool is configured and available for authentication. For the hackathon de
 
 The frontend is deployed from the `main` branch and is live. Amplify handles the build and hosting automatically on each commit.
 
-![AWS Amplify deployment overview showing deployed main branch](./Screenshots/8%20Amplify%20Setup%20and%20Deployment.png)
+<img src="./Screenshots/8%20Amplify%20Setup%20and%20Deployment.png" alt="AWS Amplify deployment overview showing deployed main branch" width="65%" />
 
 ---
 
@@ -142,15 +142,15 @@ The frontend is deployed from the `main` branch and is live. Amplify handles the
 
 The passenger enters a pickup location and destination to request a ride. The placeholder examples use real South African locations, Sandton City and Soweto, to keep the demo grounded.
 
-![MzansiRide SafeAI home screen with booking fields](./Screenshots/9%20Simulation%20Home.png)
+<img src="./Screenshots/9%20Simulation%20Home.png" alt="MzansiRide SafeAI home screen with booking fields" width="65%" />
 
 ---
 
 ### Fare Estimate
 
-After submitting the request, the app returns an estimated individual fare of R85 and a shared ride option at R43. The shared option saves 50% on the same trip. The passenger can confirm and continue from this screen.
+After submitting the request, the app returns an estimated individual fare of R85 and a shared ride option at R43. The shared option saves 50% on the same trip. The passenger can confirm and continue to the trip simulator.
 
-![Fare estimate screen showing R85 individual and R43 shared ride option](./Screenshots/10%20Simulation%20Cost.png)
+<img src="./Screenshots/10%20Simulation%20Cost.png" alt="Fare estimate screen showing R85 individual and R43 shared ride option" width="65%" />
 
 ---
 
@@ -158,23 +158,23 @@ After submitting the request, the app returns an estimated individual fare of R8
 
 The journey screen shows the route, estimated arrival time, and driver details (clearly labelled as demo data). From here, the passenger can activate Safe Journey Mode or go straight to the Alert Dashboard.
 
-![Active trip screen showing Sandton to Soweto with driver Sipho M. and Safe Journey Mode button](./Screenshots/11%20Simulation%20Trip.png)
+<img src="./Screenshots/11%20Simulation%20Trip.png" alt="Active trip screen showing Sandton to Soweto with driver Sipho M. and Safe Journey Mode button" width="65%" />
 
 ---
 
 ### Safety Alert
 
-When a prolonged stop is detected, the app raises an alert and asks the passenger to confirm whether they are okay. Amazon Bedrock generates a plain-language explanation of what triggered the alert and what the passenger can do next. The trusted contact notification is accessible from the same screen.
+When a prolonged stop is detected, the app raises an alert and asks the passenger to confirm whether they are okay. Amazon Bedrock generates a plain-language explanation of what triggered the alert and suggests next steps.
 
-![Safety alert screen with Bedrock AI response and trusted contact notification option](./Screenshots/12%20Simulation%20Safety%20Alert.png)
+<img src="./Screenshots/12%20Simulation%20Safety%20Alert.png" alt="Safety alert screen with Bedrock AI response and trusted contact notification option" width="65%" />
 
 ---
 
 ### Safety Dashboard
 
-Displays a log of all simulated trips, the events detected during each one, the passenger's check-in responses, and the fares. The fare comparison summary at the bottom shows the individual versus shared breakdown.
+Displays a log of all simulated trips, the events detected during each one, the passenger's check-in responses, and the fares. The fare comparison summary at the bottom shows the individual versus shared ride costs.
 
-![Safety Dashboard showing trip history, event log, and fare comparison](./Screenshots/13%20Simulation%20Event%20History.png)
+<img src="./Screenshots/13%20Simulation%20Event%20History.png" alt="Safety Dashboard showing trip history, event log, and fare comparison" width="65%" />
 
 ---
 
