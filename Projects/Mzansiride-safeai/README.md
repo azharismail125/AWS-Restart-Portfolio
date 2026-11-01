@@ -46,6 +46,7 @@ This is a prototype. It uses simulated data throughout and focuses on demonstrat
 | AWS Service | Role in the Prototype |
 |---|---|
 | Amazon API Gateway | Exposes the API endpoints the frontend calls |
+| Amazon IAM | Creation of a specific user to build and deploy the app |
 | AWS Lambda | Handles ride processing, safety rule logic, and alert workflows |
 | Amazon Bedrock | Generates plain-language safety explanations for the passenger |
 | Amazon DynamoDB | Stores trip and alert records |
