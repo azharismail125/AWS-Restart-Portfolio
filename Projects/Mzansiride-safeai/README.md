@@ -76,7 +76,7 @@ No privileged AWS credentials are placed in the frontend code. Backend operation
 
 Retrieves the current alert status for a trip. The test result shows a 200 response with CORS headers confirming the function is working correctly.
 
-<img src="./Screenshots/1%20Lambda%20AlertStatus%20and%20Test.png" alt="Lambda getAlertStatus with successful test" width="65%" />
+<img src="./Screenshots/1%20Lambda%20AlertStatus%20and%20Test.png" alt="Lambda getAlertStatus with successful test" width="80%" />
 
 ---
 
@@ -84,7 +84,7 @@ Retrieves the current alert status for a trip. The test result shows a 200 respo
 
 Triggered via API Gateway. Takes the passenger's booking details, processes the request, and applies the safety monitoring logic.
 
-<img src="./Screenshots/2%20Lambda%20Process%20Ride%20with%20Test.png" alt="Lambda processRideRequest with API Gateway trigger and successful test" width="65%" />
+<img src="./Screenshots/2%20Lambda%20Process%20Ride%20with%20Test.png" alt="Lambda processRideRequest with API Gateway trigger and successful test" width="80%" />
 
 ---
 
@@ -92,7 +92,7 @@ Triggered via API Gateway. Takes the passenger's booking details, processes the 
 
 Connected to Amazon SNS. Fires when a predefined safety event is detected during a simulated trip, such as a prolonged stop or a route deviation.
 
-<img src="./Screenshots/3%20Lambda%20Safety%20With%20Test.png" alt="Lambda triggerSafetyEvent with SNS trigger and successful test" width="65%" />
+<img src="./Screenshots/3%20Lambda%20Safety%20With%20Test.png" alt="Lambda triggerSafetyEvent with SNS trigger and successful test" width="80%" />
 
 ---
 
@@ -100,7 +100,7 @@ Connected to Amazon SNS. Fires when a predefined safety event is detected during
 
 Three routes are configured: `POST /ride/request`, `POST /safety-event`, and `GET /status`. All three use Lambda proxy integration, which means API Gateway passes the full request directly to Lambda and returns responses to the frontend.
 
-<img src="./Screenshots/4%20API%20Gateway%20Setup.png" alt="API Gateway resource and method configuration" width="65%" />
+<img src="./Screenshots/4%20API%20Gateway%20Setup.png" alt="API Gateway resource and method configuration" width="80%" />
 
 ---
 
@@ -108,7 +108,7 @@ Three routes are configured: `POST /ride/request`, `POST /safety-event`, and `GE
 
 The `SafeRideAlerts` topic has a confirmed email subscription. This is the channel used to notify a trusted contact when the passenger triggers a notification from the alert screen.
 
-<img src="./Screenshots/5%20SNS%20Confirmation.png" alt="SNS SafeRideAlerts topic with confirmed email subscription" width="65%" />
+<img src="./Screenshots/5%20SNS%20Confirmation.png" alt="SNS SafeRideAlerts topic with confirmed email subscription" width="80%" />
 
 ---
 
@@ -116,7 +116,7 @@ The `SafeRideAlerts` topic has a confirmed email subscription. This is the chann
 
 The `SafeRideTrips` table stores trip records. Each item uses `tripId` as the partition key and includes fields like `driver` and `status` to track the trip and any safety events recorded against it.
 
-<img src="./Screenshots/6%20DynamoDB%20Setup.png" alt="DynamoDB SafeRideTrips table with sample trip item" width="65%" />
+<img src="./Screenshots/6%20DynamoDB%20Setup.png" alt="DynamoDB SafeRideTrips table with sample trip item" width="80%" />
 
 ---
 
@@ -124,7 +124,7 @@ The `SafeRideTrips` table stores trip records. Each item uses `tripId` as the pa
 
 A user pool is configured and available for authentication. For the hackathon demo, login is optional and the app can be accessed without it.
 
-<img src="./Screenshots/7%20Cognito%20Setup.png" alt="Amazon Cognito user pool overview" width="65%" />
+<img src="./Screenshots/7%20Cognito%20Setup.png" alt="Amazon Cognito user pool overview" width="80%" />
 
 ---
 
@@ -132,7 +132,7 @@ A user pool is configured and available for authentication. For the hackathon de
 
 The frontend is deployed from the `main` branch and is live. Amplify handles the build and hosting automatically on each commit.
 
-<img src="./Screenshots/8%20Amplify%20Setup%20and%20Deployment.png" alt="AWS Amplify deployment overview showing deployed main branch" width="65%" />
+<img src="./Screenshots/8%20Amplify%20Setup%20and%20Deployment.png" alt="AWS Amplify deployment overview showing deployed main branch" width="80%" />
 
 ---
 
@@ -142,7 +142,7 @@ The frontend is deployed from the `main` branch and is live. Amplify handles the
 
 The passenger enters a pickup location and destination to request a ride. The placeholder examples use real South African locations, Sandton City and Soweto, to keep the demo grounded.
 
-<img src="./Screenshots/9%20Simulation%20Home.png" alt="MzansiRide SafeAI home screen with booking fields" width="65%" />
+<img src="./Screenshots/9%20Simulation%20Home.png" alt="MzansiRide SafeAI home screen with booking fields" width="80%" />
 
 ---
 
@@ -150,7 +150,7 @@ The passenger enters a pickup location and destination to request a ride. The pl
 
 After submitting the request, the app returns an estimated individual fare of R85 and a shared ride option at R43. The shared option saves 50% on the same trip. The passenger can confirm and continue to the trip simulator.
 
-<img src="./Screenshots/10%20Simulation%20Cost.png" alt="Fare estimate screen showing R85 individual and R43 shared ride option" width="65%" />
+<img src="./Screenshots/10%20Simulation%20Cost.png" alt="Fare estimate screen showing R85 individual and R43 shared ride option" width="80%" />
 
 ---
 
@@ -158,7 +158,7 @@ After submitting the request, the app returns an estimated individual fare of R8
 
 The journey screen shows the route, estimated arrival time, and driver details (clearly labelled as demo data). From here, the passenger can activate Safe Journey Mode or go straight to the Alert Dashboard.
 
-<img src="./Screenshots/11%20Simulation%20Trip.png" alt="Active trip screen showing Sandton to Soweto with driver Sipho M. and Safe Journey Mode button" width="65%" />
+<img src="./Screenshots/11%20Simulation%20Trip.png" alt="Active trip screen showing Sandton to Soweto with driver Sipho M. and Safe Journey Mode button" width="80%" />
 
 ---
 
@@ -166,7 +166,7 @@ The journey screen shows the route, estimated arrival time, and driver details (
 
 When a prolonged stop is detected, the app raises an alert and asks the passenger to confirm whether they are okay. Amazon Bedrock generates a plain-language explanation of what triggered the alert and suggests next steps.
 
-<img src="./Screenshots/12%20Simulation%20Safety%20Alert.png" alt="Safety alert screen with Bedrock AI response and trusted contact notification option" width="65%" />
+<img src="./Screenshots/12%20Simulation%20Safety%20Alert.png" alt="Safety alert screen with Bedrock AI response and trusted contact notification option" width="80%" />
 
 ---
 
@@ -174,7 +174,7 @@ When a prolonged stop is detected, the app raises an alert and asks the passenge
 
 Displays a log of all simulated trips, the events detected during each one, the passenger's check-in responses, and the fares. The fare comparison summary at the bottom shows the individual versus shared ride costs.
 
-<img src="./Screenshots/13%20Simulation%20Event%20History.png" alt="Safety Dashboard showing trip history, event log, and fare comparison" width="65%" />
+<img src="./Screenshots/13%20Simulation%20Event%20History.png" alt="Safety Dashboard showing trip history, event log, and fare comparison" width="80%" />
 
 ---
 
