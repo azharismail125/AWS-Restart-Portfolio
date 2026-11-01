@@ -8,13 +8,14 @@ Hackathon Theme: AI for Real-World Impact | Built on AWS | 24-hour prototype
 
 ---
 
-## <span style="color: green;">The Problem</span>
+## ![The Problem](https://img.shields.io/badge/The%20Problem-green?style=for-the-badge)
 
 Using transport in South Africa comes with real concerns. Women and vulnerable passengers worry about unexpected route changes, prolonged stops, travelling with unfamiliar drivers, and whether anyone will be there if something goes wrong.
 
 There are apps that address parts of this. Not many that bring journey monitoring, passenger check-ins, and AI-assisted safety guidance into a single workflow, especially not in a South African context.
 
-## <span style="color: green;">What We Built</span>
+## ![What We Built](https://img.shields.io/badge/What%20We%20Built-green?style=for-the-badge)
+
 
 MzansiRide SafeAI is a responsive web app that walks a passenger through an end-to-end simulated journey, from booking to safety event handling. It uses predefined backend rules to detect unusual events such as prolonged stops or unexpected route changes.
 
@@ -24,7 +25,8 @@ This is a prototype. It uses simulated data throughout and focuses on demonstrat
 
 ---
 
-## <span style="color: green;">Core Features</span>
+## ![Core Features](https://img.shields.io/badge/Core%20Features-green?style=for-the-badge)
+
 
 | Feature | Description |
 |---|---|
@@ -39,9 +41,11 @@ This is a prototype. It uses simulated data throughout and focuses on demonstrat
 
 ---
 
-## <span style="color: green;">AWS Architecture</span>
+## ![AWS Architecture](https://img.shields.io/badge/AWS%20Architecture-green?style=for-the-badge)
 
-### <span style="color: green;">Services Used</span>
+
+### ![Services Used](https://img.shields.io/badge/Services%20Used-green?style=for-the-badge)
+
 
 | AWS Service | Role in the Prototype |
 |---|---|
@@ -55,7 +59,8 @@ This is a prototype. It uses simulated data throughout and focuses on demonstrat
 | AWS Amplify | Hosts and deploys the frontend |
 | Amazon CloudWatch | Captures backend logs for monitoring and troubleshooting |
 
-### <span style="color: green;">How It Works</span>
+### ![How It Works](https://img.shields.io/badge/How%20It%20Works-green?style=for-the-badge)
+
 
 1. The passenger opens the app and requests a simulated ride
 2. The frontend sends the request to Amazon API Gateway
@@ -71,7 +76,7 @@ No privileged AWS credentials are placed in the frontend code. Backend operation
 
 ---
 
-## <span style="color: green;">AWS Setup</span>
+## ![App Setup](https://img.shields.io/badge/App%20Walkthrough-green?style=for-the-badge)
 
 ### <span style="color: green;">Lambda: getAlertStatus</span>
 
@@ -179,7 +184,7 @@ Displays a log of all simulated trips, the events detected during each one, the 
 
 ---
 
-## <span style="color: green;">Tech Stack</span>
+## ![Tech Stack](https://img.shields.io/badge/App%20Walkthrough-green?style=for-the-badge)
 
 **Frontend**
 - React with TypeScript
@@ -195,14 +200,11 @@ Displays a log of all simulated trips, the events detected during each one, the 
 - Amazon Cognito
 - Amazon CloudWatch
 
-**Source Control**
-- Git and GitHub
-
 ---
 
 ## <span style="color: green;">Out of Scope</span>
 
-The following were not built during the 24-hour window and are listed as future work:
+The following were not built during for this version and are listed as future work:
 
 - Continuous live GPS tracking
 - Real-time route deviation detection using a mapping API
@@ -215,7 +217,7 @@ The following were not built during the 24-hour window and are listed as future 
 
 ---
 
-## <span style="color: green;">Privacy and Security</span>
+## ![Privacy % Security](https://img.shields.io/badge/App%20Walkthrough-green?style=for-the-badge)
 
 - All trip, driver, and passenger data in the prototype is simulated
 - No real location information is collected during the demo
