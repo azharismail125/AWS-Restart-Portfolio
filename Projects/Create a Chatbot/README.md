@@ -1,4 +1,4 @@
-![AWS Lex Chatbot Project](https://img.shields.io/badge/AWS%20Lex%20Chatbot%20Project-brightgreen?style=for-the-badge)
+![Amazon Lex Chatbot Project](https://img.shields.io/badge/Amazon%20Lex%20Chatbot%20Project-brightgreen?style=for-the-badge)
 
 ![Overview](https://img.shields.io/badge/Overview-orange?style=for-the-badge)
 
@@ -8,7 +8,7 @@ Both bots are built in the same Amazon Lex V2 environment using English (ZA) and
 
 ---
 
-## Table of Contents
+![Table of Contents](https://img.shields.io/badge/Table%20of%20Contents-brightgreen?style=for-the-badge)
 - [Part 1 – Info Bot](#part-1-info-bot)
 - [Part 2 – Quiz Bot](#part-2-quiz-bot)
 - [Services Used](#services-used)
@@ -126,9 +126,9 @@ The `RetryAnswer` slot then asks whether the user wants to go again.
 ![Services Used](https://img.shields.io/badge/Services%20Used-orange?style=for-the-badge)
 
 - Amazon Lex
-- AWS Lambda (Python)
+- Lambda (Python)
 - Amazon CloudWatch
-- AWS Management Console
+- Management Console
 
 ---
 
