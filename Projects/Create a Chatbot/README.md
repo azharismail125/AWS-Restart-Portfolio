@@ -1,7 +1,7 @@
 # AWS Lex Chatbot – Praesignis Special Project 3
 
 
-The aim here is simple: Get hands on with Amazon Lex by building something functional and not just following a tutorial. It grew into two separate bots: a simple S3 info bot to get the basics right and a full quiz bot with branching logic, Lambda scoring and a retry loop.
+The aim here is simple: Get hands on with Amazon Lex by building something functional and not just following a tutorial. It grew into two separate bots: a simple S3 info bot to get the basics right and a more interactive quiz bot to add real branching logic and score tracking.
 
 Both bots are built in the same Amazon Lex V2 environment using English (ZA) and tested through the Lex console test window.
 
@@ -23,7 +23,7 @@ Both bots are built in the same Amazon Lex V2 environment using English (ZA) and
 
 The first bot is simple. A user asks a question about what S3 is and the bot returns a static definition. The bot consists of just intent matching and a response.
 
-![Intents list](images/0_1_Infobot_Intents.png)
+![Intents list](Screenshots/0.1%20NotJoe%20Intents.png)
 *GetS3Information and FallbackIntent — the only two intents in the bot*
 
 **Sample utterances:**
@@ -31,17 +31,17 @@ The first bot is simple. A user asks a question about what S3 is and the bot ret
 - "Tell me about S3"
 - "What does S3 do"
 
-![Sample utterances](images/0_3_Infobot_Sample_Utterences.png)
+![Sample utterances](Screenshots/0.3%20NotJoe%20Sample%20Utterences.png)
 
 **Response:**
 > "Amazon S3 or Simple Storage Service is AWS's object storage service. It lets you store and retrieve any amount of data from anywhere at any time."
 
-![Live test](images/0_2_Infobot_Info.png)
+![Live test](Screenshots/0.2%20NotJoe%20Info.png)
 *Bot responding correctly to "What is S3?" in the test window*
 
 ### Flow
 
-![Visual flow](images/0_4_NotJoe_Visual.png)
+![Visual flow](Screenshots/0.4%20NotJoe%20Visual.png)
 *Utterance triggers the intent, bot returns the S3 definition, conversation ends.*
 
 ---
@@ -54,15 +54,15 @@ The first bot is simple. A user asks a question about what S3 is and the bot ret
 **Slot type:** `AMAZON.AlphaNumeric`  
 **Lambda function:** `S3QuizFunction`
 
-Part 2 is where the complexity comes in. The quiz bot asks two S3 questions then evaluates each answer using conditional branching, tracks the score via Lambda and gives the user the option to retry at the end.
+Part 2 is where the complexity comes in. The quiz bot asks two S3 questions then evaluates each answer using conditional branching, tracks the score via Lambda and gives the user the option to retry again.
 
-![S3Quiz intent details](images/1_S3_Quiz_Intent.png)
+![S3Quiz intent details](Screenshots/1%20S3%20Quiz%20Intent.png)
 
 **Sample utterances:**
 - "Start the quiz"
 - "I want to take the S3 quiz"
 
-![Sample utterances](images/2_Sample_Utterances.png)
+![Sample utterances](Screenshots/2%20Sample%20Utterances.png)
 
 ### Questions
 
@@ -71,9 +71,9 @@ Part 2 is where the complexity comes in. The quiz bot asks two S3 questions then
 A) Cloud storage &nbsp; B) Web hosting &nbsp; C) Cloud computing  
 Correct: **A**
 
-![Q1Answer slot](images/3_Slot_Q1.png)
+![Q1Answer slot](Screenshots/3%20Slot%20Q1.png)
 
-![Q1Answer advanced options and next step](images/4_Slot_Q1_Advanced_and_Next_Step.png)
+![Q1Answer advanced options and next step](Screenshots/4%20Slot%20Q1%20Advanced%20and%20Next%20Step.png)
 *Conditional branching evaluates the slot value before advancing*
 
 **Q2 — `Q2Answer`**  
@@ -81,7 +81,7 @@ Correct: **A**
 A) 5 GB &nbsp; B) 100 GB &nbsp; C) 5 TB  
 Correct: **C**
 
-![Q2Answer slot](images/5_Slot_Q2.png)
+![Q2Answer slot](Screenshots/5%20Slot%20Q2.png)
 
 Each slot evaluates the answer before moving forward. A correct letter gets a correct message and advances to the next slot. Anything else returns the incorrect message with the right answer shown.
 
@@ -89,27 +89,27 @@ Each slot evaluates the answer before moving forward. A correct letter gets a co
 
 Lambda tallies the score across both slots and returns it at the end.
 
-![Lambda test success](images/7_Lambda_Test_Success.png)
+![Lambda test success](Screenshots/7%20Lambda%20Test%20Success.png)
 
 The `RetryAnswer` slot then asks whether the user wants to go again.
 
-![RetryAnswer slot](images/6_Slot_TryAgain.png)
+![RetryAnswer slot](Screenshots/6%20Slot%20TryAgain.png)
 
-![Closing response and code hook](images/8_Closing_Statement_and_Lambda_Code_Hook_Confirmed.png)
+![Closing response and code hook](Screenshots/8%20Closing%20Statement%20and%20Lambda%20Code%20Hook%20Confirmed.png)
 *Closing response set to "Thanks for playing the S3 quiz!" with Lambda code hook confirmed*
 
 ### Flow
 
-![Quiz visual flow](images/0_5_Joe_Visual.png)
+![Quiz visual flow](Screenshots/0.5%20Joe%20Visual.png)
 *Start, Code hook (Lambda init), Q1Answer, Q2Answer, RetryAnswer, Fulfilment (Lambda scoring), Closing response, End conversation.*
 
 ### Live Test
 
-![Q1 correct answer](images/9_Test_1.png)
+![Q1 correct answer](Screenshots/9%20Test%201.png)
 
-![Q2 correct and retry prompt](images/10_Test_Q2_and_Retry_Request.png)
+![Q2 correct and retry prompt](Screenshots/10%20Test%20Q2%20and%20Retry%20Request.png)
 
-![Incorrect answer and end](images/11_Test_Incorrect_Response_and_End.png)
+![Incorrect answer and end](Screenshots/11%20Test%20Incorrect%20Response%20and%20End.png)
 
 ---
 
