@@ -1,4 +1,4 @@
-# AWS Lex Chatbot – Praesignis Special Project 3
+# AWS Lex Chatbot Project
 
 
 The aim here is simple: Get hands on with Amazon Lex by building something functional and not just following a tutorial. It grew into two separate bots: a simple S3 info bot to get the basics right and a more interactive quiz bot to add real branching logic and score tracking.
@@ -10,7 +10,7 @@ Both bots are built in the same Amazon Lex V2 environment using English (ZA) and
 ## Table of Contents
 - [Part 1 – Info Bot](#part-1--info-bot)
 - [Part 2 – Quiz Bot](#part-2--quiz-bot)
-- [Tech Stack](#tech-stack)
+- [Services Used](#services-used)
 - [Notes](#notes)
 
 ---
@@ -24,7 +24,7 @@ Both bots are built in the same Amazon Lex V2 environment using English (ZA) and
 The first bot is simple. A user asks a question about what S3 is and the bot returns a static definition. The bot consists of just intent matching and a response.
 
 ![Intents list](Screenshots/0.1%20NotJoe%20Intents.png)
-*GetS3Information and FallbackIntent — the only two intents in the bot*
+*GetS3Information and FallbackIntent which the only two intents for this bot*
 
 **Sample utterances:**
 - "What is S3?"
@@ -37,12 +37,12 @@ The first bot is simple. A user asks a question about what S3 is and the bot ret
 > "Amazon S3 or Simple Storage Service is AWS's object storage service. It lets you store and retrieve any amount of data from anywhere at any time."
 
 ![Live test](Screenshots/0.2%20NotJoe%20Info.png)
-*Bot responding correctly to "What is S3?" in the test window*
+*The bot responding correctly to "What is S3?" in the test window*
 
 ### Flow
 
 ![Visual flow](Screenshots/0.4%20NotJoe%20Visual.png)
-*Utterance triggers the intent, bot returns the S3 definition, conversation ends.*
+*An utterance triggers the intent, the bot returns the S3 definition then the conversation ends.*
 
 ---
 
@@ -66,9 +66,12 @@ Part 2 is where the complexity comes in. The quiz bot asks two S3 questions then
 
 ### Questions
 
-**Q1 — `Q1Answer`**  
+**Question 1: `Q1Answer`**  
+
 *What is S3 mainly used for?*  
+
 A) Cloud storage &nbsp; B) Web hosting &nbsp; C) Cloud computing  
+
 Correct: **A**
 
 ![Q1Answer slot](Screenshots/3%20Slot%20Q1.png)
@@ -76,14 +79,17 @@ Correct: **A**
 ![Q1Answer advanced options and next step](Screenshots/4%20Slot%20Q1%20Advanced%20and%20Next%20Step.png)
 *Conditional branching evaluates the slot value before advancing*
 
-**Q2 — `Q2Answer`**  
+**Question 2: `Q2Answer`**  
+
 *What is the maximum file size you can upload in a single PUT request to S3?*  
+
 A) 5 GB &nbsp; B) 100 GB &nbsp; C) 5 TB  
+
 Correct: **C**
 
 ![Q2Answer slot](Screenshots/5%20Slot%20Q2.png)
 
-Each slot evaluates the answer before moving forward. A correct letter gets a correct message and advances to the next slot. Anything else returns the incorrect message with the right answer shown.
+Each slot evaluates the answer before moving forward. A correct letter prompts a "Correct" message and advances to the next slot. Anything else returns the "Incorrect" message with the right answer shown.
 
 ### Scoring and Retry
 
@@ -96,12 +102,12 @@ The `RetryAnswer` slot then asks whether the user wants to go again.
 ![RetryAnswer slot](Screenshots/6%20Slot%20TryAgain.png)
 
 ![Closing response and code hook](Screenshots/8%20Closing%20Statement%20and%20Lambda%20Code%20Hook%20Confirmed.png)
-*Closing response set to "Thanks for playing the S3 quiz!" with Lambda code hook confirmed*
+*Closing response set to "Thanks for playing the S3 quiz!" with Lambda code hook confirmed.*
 
 ### Flow
 
 ![Quiz visual flow](Screenshots/0.5%20Joe%20Visual.png)
-*Start, Code hook (Lambda init), Q1Answer, Q2Answer, RetryAnswer, Fulfilment (Lambda scoring), Closing response, End conversation.*
+*Start, Code hook (Lambda initialized), Q1Answer, Q2Answer, RetryAnswer, Fulfilment (Lambda scoring), Closing response, End conversation.*
 
 ### Live Test
 
@@ -113,9 +119,9 @@ The `RetryAnswer` slot then asks whether the user wants to go again.
 
 ---
 
-## Tech Stack
+## Services Used
 
-- Amazon Lex V2
+- Amazon Lex
 - AWS Lambda (Python)
 - Amazon CloudWatch
 - AWS Management Console
