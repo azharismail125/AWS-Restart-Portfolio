@@ -1,5 +1,6 @@
-# AWS Lex Chatbot Project
+![AWS Lex Chatbot Project](https://img.shields.io/badge/AWS%20Lex%20Chatbot%20Project-brightgreen?style=for-the-badge)
 
+![Overview](https://img.shields.io/badge/Overview-orange?style=for-the-badge)
 
 The aim here is simple: Get hands on with Amazon Lex by building something functional and not just following a tutorial. It grew into two separate bots: a simple S3 info bot to get the basics right and a more interactive quiz bot to add real branching logic and score tracking.
 
@@ -8,14 +9,15 @@ Both bots are built in the same Amazon Lex V2 environment using English (ZA) and
 ---
 
 ## Table of Contents
-- [Part 1 – Info Bot](#part-1--info-bot)
-- [Part 2 – Quiz Bot](#part-2--quiz-bot)
+- [Part 1 – Info Bot](#part-1-info-bot)
+- [Part 2 – Quiz Bot](#part-2-quiz-bot)
 - [Services Used](#services-used)
 - [Notes](#notes)
 
 ---
 
-## Part 1: Info Bot
+<a id="part-1-info-bot"></a>
+![Part 1: Info Bot](https://img.shields.io/badge/Part%201%3A%20Info%20Bot-orange?style=for-the-badge)
 
 **Bot name:** NotJoe  
 **Intent:** `GetS3Information`  
@@ -39,14 +41,15 @@ The first bot is simple. A user asks a question about what S3 is and the bot ret
 ![Live test](Screenshots/0.2%20NotJoe%20Info.png)
 *The bot responding correctly to "What is S3?" in the test window*
 
-### Flow
+![Flow](https://img.shields.io/badge/Flow-orange?style=for-the-badge)
 
 ![Visual flow](Screenshots/0.4%20NotJoe%20Visual.png)
 *An utterance triggers the intent, the bot returns the S3 definition then the conversation ends.*
 
 ---
 
-## Part 2: Quiz Bot
+<a id="part-2-quiz-bot"></a>
+![Part 2: Quiz Bot](https://img.shields.io/badge/Part%202%3A%20Quiz%20Bot-orange?style=for-the-badge)
 
 **Bot name:** Joe  
 **Intent:** `S3Quiz`  
@@ -64,7 +67,7 @@ Part 2 is where the complexity comes in. The quiz bot asks two S3 questions then
 
 ![Sample utterances](Screenshots/2%20Sample%20Utterances.png)
 
-### Questions
+![Questions](https://img.shields.io/badge/Questions-orange?style=for-the-badge)
 
 **Question 1: `Q1Answer`**  
 
@@ -91,7 +94,7 @@ Correct: **C**
 
 Each slot evaluates the answer before moving forward. A correct letter prompts a "Correct" message and advances to the next slot. Anything else returns the "Incorrect" message with the right answer shown.
 
-### Scoring and Retry
+![Scoring and Retry](https://img.shields.io/badge/Scoring%20and%20Retry-orange?style=for-the-badge)
 
 Lambda tallies the score across both slots and returns it at the end.
 
@@ -104,12 +107,12 @@ The `RetryAnswer` slot then asks whether the user wants to go again.
 ![Closing response and code hook](Screenshots/8%20Closing%20Statement%20and%20Lambda%20Code%20Hook%20Confirmed.png)
 *Closing response set to "Thanks for playing the S3 quiz!" with Lambda code hook confirmed.*
 
-### Flow
+![Flow](https://img.shields.io/badge/Flow-orange?style=for-the-badge)
 
 ![Quiz visual flow](Screenshots/0.5%20Joe%20Visual.png)
 *Start, Code hook (Lambda initialized), Q1Answer, Q2Answer, RetryAnswer, Fulfilment (Lambda scoring), Closing response, End conversation.*
 
-### Live Test
+![Live Test](https://img.shields.io/badge/Live%20Test-orange?style=for-the-badge)
 
 ![Q1 correct answer](Screenshots/9%20Test%201.png)
 
@@ -119,7 +122,8 @@ The `RetryAnswer` slot then asks whether the user wants to go again.
 
 ---
 
-## Services Used
+<a id="services-used"></a>
+![Services Used](https://img.shields.io/badge/Services%20Used-orange?style=for-the-badge)
 
 - Amazon Lex
 - AWS Lambda (Python)
@@ -128,7 +132,8 @@ The `RetryAnswer` slot then asks whether the user wants to go again.
 
 ---
 
-## Notes
+<a id="notes"></a>
+![Notes](https://img.shields.io/badge/Notes-orange?style=for-the-badge)
 
 - Language set to English (ZA)
 - `AMAZON.AlphaNumeric` slot type used for single-letter answers
