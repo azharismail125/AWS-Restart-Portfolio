@@ -2,6 +2,15 @@
 
 ## About The Certificates
 
+# $\color{#00aa00}{\text{AWS Certified AI Practitioner}}$
+Demonstrates foundational knowledge of artificial intelligence, machine learning, and generative AI concepts and their applications on AWS.
+
+<p align="center">
+  <img src="Screenshots/Ai_Practitioner_Certificate.png" width="70%" alt="AWS Certified AI Practitioner Certificate">
+</p>
+
+---
+
 # $\color{#00aa00}{\text{Cloud First Steps}}$
 Implementation of Amazon EC2 instances across multiple Availability Zones in order to increase the reliability and availability of the current stabilization system.
 
@@ -144,6 +153,7 @@ Fundamentals of planning a generative AI project.
 </p>
 
 ## Quick Links
+- [AWS Certified AI Practitioner](Screenshots/Ai_Practitioner_Certificate.png)
 - [Cloud First Steps](Screenshots/Cloud_First_Steps_certificate.png)
 - [Cloud Computing Essentials](Screenshots/Cloud_Computing_Essentials.png)
 - [Cloud Economics](Screenshots/Cloud_Economics.png)
