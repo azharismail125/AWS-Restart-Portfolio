@@ -116,6 +116,33 @@ Use AI Services with Amazon SageMaker AI to view, transcribe and verify audio ou
   <img src="Screenshots/Use_AI_Services.png" width="70%" alt="Use AI Services Certificate">
 </p>
 
+---
+
+# $\color{#00aa00}{\text{Amazon Bedrock Getting Started}}$
+Introduction to getting started with Amazon Bedrock.
+
+<p align="center">
+  <img src="Screenshots/Amazon_Bedrock_Getting_Started.png" width="70%" alt="Amazon Bedrock Getting Started Certificate">
+</p>
+
+---
+
+# $\color{#00aa00}{\text{Introduction to Generative AI: Art of the Possible}}$
+Introduction to the possibilities and applications of generative AI.
+
+<p align="center">
+  <img src="Screenshots/Introduction_to_Generative_AI_Art_of_the_Possible.png" width="70%" alt="Introduction to Generative AI: Art of the Possible Certificate">
+</p>
+
+---
+
+# $\color{#00aa00}{\text{Planning a Generative AI Project}}$
+Fundamentals of planning a generative AI project.
+
+<p align="center">
+  <img src="Screenshots/Planning_a_Generative_AI_Project.png" width="70%" alt="Planning a Generative AI Project Certificate">
+</p>
+
 ## Quick Links
 - [Cloud First Steps](Screenshots/Cloud_First_Steps_certificate.png)
 - [Cloud Computing Essentials](Screenshots/Cloud_Computing_Essentials.png)
@@ -130,3 +157,6 @@ Use AI Services with Amazon SageMaker AI to view, transcribe and verify audio ou
 - [Connecting VPCs](Screenshots/Connecting_VPCs.png)
 - [Create an AI Smart Assistant](Screenshots/Create_An_AI_Smart_Assistant.png)
 - [Use AI Services](Screenshots/Use_AI_Services)
+- [Amazon Bedrock Getting Started](Screenshots/Amazon_Bedrock_Getting_Started.png)
+- [Introduction to Generative AI: Art of the Possible](Screenshots/Introduction_to_Generative_AI_Art_of_the_Possible.png)
+- [Planning a Generative AI Project](Screenshots/Planning_a_Generative_AI_Project.png)
