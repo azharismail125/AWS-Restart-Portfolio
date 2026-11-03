@@ -71,7 +71,7 @@ This is a prototype. It uses simulated data throughout and focuses on demonstrat
 ---
 
 <a id="aws-architecture"></a>
-![AWS Architecture](https://img.shields.io/badge/AWS%20Architecture-orange?style=for-the-badge)
+![AWS Architecture](https://img.shields.io/badge/AWS%20Architecture-brightgreen?style=for-the-badge)
 
 <a id="services-used"></a>
 ![Services Used](https://img.shields.io/badge/Services%20Used-orange?style=for-the-badge)
@@ -106,7 +106,7 @@ No privileged AWS credentials are placed in the frontend code. Backend operation
 ---
 
 <a id="aws-setup"></a>
-![AWS Setup](https://img.shields.io/badge/AWS%20Setup-orange?style=for-the-badge)
+![AWS Setup](https://img.shields.io/badge/AWS%20Setup-brightgreen?style=for-the-badge)
 
 <a id="lambda-getalertstatus"></a>
 ![Lambda: getAlertStatus](https://img.shields.io/badge/Lambda%3A%20getAlertStatus-orange?style=for-the-badge)
@@ -181,7 +181,7 @@ The frontend is deployed from the `main` branch and is live. Amplify handles the
 ---
 
 <a id="app-walkthrough"></a>
-![App Walkthrough](https://img.shields.io/badge/App%20Walkthrough-orange?style=for-the-badge)
+![App Walkthrough](https://img.shields.io/badge/App%20Walkthrough-brightgreen?style=for-the-badge)
 
 <a id="home-screen"></a>
 ![Home Screen](https://img.shields.io/badge/Home%20Screen-orange?style=for-the-badge)
@@ -229,7 +229,7 @@ Displays a log of all simulated trips, the events detected during each one, the 
 ---
 
 <a id="tech-stack"></a>
-![Tech Stack](https://img.shields.io/badge/Tech%20Stack-orange?style=for-the-badge)
+![Tech Stack](https://img.shields.io/badge/Tech%20Stack-brightgreen?style=for-the-badge)
 
 **Frontend**
 - React with TypeScript
