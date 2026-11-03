@@ -2,7 +2,7 @@
 
 ## About The Certificates
 
-# $\color{#00aa00}{\text{AWS Certified AI Practitioner}}$
+# $\color{#007FFF}{\text{AWS Certified AI Practitioner}}$
 Demonstrates foundational knowledge of artificial intelligence, machine learning, and generative AI concepts and their applications on AWS.
 
 <p align="center">
